@@ -1,0 +1,352 @@
+version: "2.0"
+stories:
+- story: qa
+  steps:
+  - intent: qa
+  - action: utter_qa
+- story: callname
+  steps:
+  - intent: callname
+  - action: utter_callname
+- story: thank
+  steps:
+  - intent: thank
+  - action: utter_noworries
+- story: goodbye
+  steps:
+  - intent: bye
+  - action: utter_bye
+- story: refuse
+  steps:
+  - intent: refuse
+  - action: utter_refuse
+- story: out_of_scope
+  steps:
+  - intent: out_of_scope
+  - action: utter_out_of_scope
+- story: kg
+  steps:
+  - intent: kg
+  - action: utter_kg
+- story: menu
+  steps:
+  - intent: menu
+  - action: utter_menu
+- story: mainmenu
+  steps:
+  - intent: mainmenu
+  - action: utter_mainmenu
+- story: googlemap
+  steps:
+  - intent: googlemap
+  - action: utter_googlemap
+- story: travel macau path1
+  steps:
+  - intent: travel_macau
+  - action: utter_travel_macau
+  - intent: inform_departure
+    entities:
+    - departure_airport: airport
+  - action: utter_departure_airport
+- story: travel macau path2
+  steps:
+  - intent: travel_macau
+  - action: utter_travel_macau
+  - intent: inform_departure
+    entities:
+    - departure_downtown: downtown
+  - action: utter_departure_downtown
+- story: accommodation_flow
+  steps:
+  - intent: accommodation_flow
+  - action: utter_accommodation_flow
+- story: events_flow
+  steps:
+  - intent: events_flow
+  - action: utter_events_flow
+  - intent: inform_duration
+    entities:
+    - duration: 1 July to 30 July
+  - action: action_event
+- story: immigration_flow
+  steps:
+  - intent: immigration_flow
+  - action: utter_immigration_flow
+- story: transport_flow
+  steps:
+  - intent: transport_flow
+  - action: utter_transport_flow
+- story: getting there
+  steps:
+  - intent: gettingthere
+  - action: utter_ask_location_from
+  - intent: inform_location
+    entities:
+    - location: Kennedy Town
+  - checkpoint: GENR_OR_5195d
+- story: getting there
+  steps:
+  - intent: gettingthere
+  - action: utter_ask_location_from
+  - intent: kg
+  - checkpoint: GENR_OR_5195d
+- story: getting there
+  steps:
+  - checkpoint: GENR_OR_5195d
+  - action: action_gettingthere
+- story: transit flow
+  steps:
+  - intent: transit
+  - action: action_transit
+  - intent: inform_duration
+    entities:
+    - duration: today from 10am to 6pm
+  - action: action_transit
+  - intent: refuse
+  - action: utter_refuse
+- story: shoppingmall flow
+  steps:
+  - intent: shoppingmall_flow
+  - action: utter_ask_shoppingmall_distict
+  - intent: inform_location
+    entities:
+    - location: Kennedy Town
+  - checkpoint: GENR_OR_95c48
+- story: shoppingmall flow
+  steps:
+  - intent: shoppingmall_flow
+  - action: utter_ask_shoppingmall_distict
+  - intent: kg
+  - checkpoint: GENR_OR_95c48
+- story: shoppingmall flow
+  steps:
+  - checkpoint: GENR_OR_95c48
+  - action: action_shoppingmall
+  - intent: inform_location
+    entities:
+    - location: Kennedy Town
+  - checkpoint: GENR_OR_bdd38
+- story: shoppingmall flow
+  steps:
+  - checkpoint: GENR_OR_95c48
+  - action: action_shoppingmall
+  - intent: kg
+  - checkpoint: GENR_OR_bdd38
+- story: shoppingmall flow
+  steps:
+  - checkpoint: GENR_OR_bdd38
+  - action: action_shoppingmall
+- story: departmentstore flow
+  steps:
+  - intent: departmentstore_flow
+  - action: utter_ask_departmentstore_distict
+  - intent: inform_location
+    entities:
+    - location: Kennedy Town
+  - checkpoint: GENR_OR_91921
+- story: departmentstore flow
+  steps:
+  - intent: departmentstore_flow
+  - action: utter_ask_departmentstore_distict
+  - intent: kg
+  - checkpoint: GENR_OR_91921
+- story: departmentstore flow
+  steps:
+  - checkpoint: GENR_OR_91921
+  - action: action_departmentstore
+  - intent: inform_location
+    entities:
+    - location: Kennedy Town
+  - checkpoint: GENR_OR_7b2d2
+- story: departmentstore flow
+  steps:
+  - checkpoint: GENR_OR_91921
+  - action: action_departmentstore
+  - intent: kg
+  - checkpoint: GENR_OR_7b2d2
+- story: departmentstore flow
+  steps:
+  - checkpoint: GENR_OR_7b2d2
+  - action: action_departmentstore
+- story: sightseeing flow
+  steps:
+  - intent: sightseeing_flow
+  - action: utter_ask_sightseeing
+  - intent: sightseeing_flow
+    entities:
+    - sightseeing: Key Attractions
+  - checkpoint: GENR_OR_141d7
+- story: sightseeing flow
+  steps:
+  - intent: sightseeing_flow
+  - action: utter_ask_sightseeing
+  - intent: museum_flow
+  - checkpoint: GENR_OR_141d7
+- story: sightseeing flow
+  steps:
+  - checkpoint: GENR_OR_141d7
+  - action: action_sightseeing
+  - intent: inform_location
+    entities:
+    - location: Kennedy Town
+  - checkpoint: GENR_OR_493cd
+- story: sightseeing flow
+  steps:
+  - checkpoint: GENR_OR_141d7
+  - action: action_sightseeing
+  - intent: kg
+  - checkpoint: GENR_OR_493cd
+- story: sightseeing flow
+  steps:
+  - checkpoint: GENR_OR_493cd
+  - action: action_sightseeing
+  - intent: inform_location
+    entities:
+    - location: Kennedy Town
+  - checkpoint: GENR_OR_30225
+- story: sightseeing flow
+  steps:
+  - checkpoint: GENR_OR_493cd
+  - action: action_sightseeing
+  - intent: kg
+  - checkpoint: GENR_OR_30225
+- story: sightseeing flow
+  steps:
+  - checkpoint: GENR_OR_30225
+  - action: action_sightseeing
+- story: hiking flow
+  steps:
+  - intent: hiking_flow
+  - action: utter_ask_hiking_duration
+  - intent: inform_duration
+    entities:
+    - duration: Within 2 hours
+  - action: action_hiking
+  - intent: inform_location
+    entities:
+    - location: Kennedy Town
+  - checkpoint: GENR_OR_51f35
+- story: hiking flow
+  steps:
+  - intent: hiking_flow
+  - action: utter_ask_hiking_duration
+  - intent: inform_duration
+    entities:
+    - duration: Within 2 hours
+  - action: action_hiking
+  - intent: kg
+  - checkpoint: GENR_OR_51f35
+- story: hiking flow
+  steps:
+  - checkpoint: GENR_OR_51f35
+  - action: action_hiking
+  - intent: inform_location
+    entities:
+    - location: Kennedy Town
+  - checkpoint: GENR_OR_6ce70
+- story: hiking flow
+  steps:
+  - checkpoint: GENR_OR_51f35
+  - action: action_hiking
+  - intent: kg
+  - checkpoint: GENR_OR_6ce70
+- story: hiking flow
+  steps:
+  - checkpoint: GENR_OR_6ce70
+  - action: action_hiking
+- story: museum flow
+  steps:
+  - intent: museum_flow
+  - action: utter_ask_museum_district
+  - intent: inform_location
+    entities:
+    - location: Kennedy Town
+  - checkpoint: GENR_OR_390fb
+- story: museum flow
+  steps:
+  - intent: museum_flow
+  - action: utter_ask_museum_district
+  - intent: kg
+  - checkpoint: GENR_OR_390fb
+- story: museum flow
+  steps:
+  - checkpoint: GENR_OR_390fb
+  - action: action_museum
+  - intent: inform_location
+    entities:
+    - location: Kennedy Town
+  - checkpoint: GENR_OR_53d08
+- story: museum flow
+  steps:
+  - checkpoint: GENR_OR_390fb
+  - action: action_museum
+  - intent: kg
+  - checkpoint: GENR_OR_53d08
+- story: museum flow
+  steps:
+  - checkpoint: GENR_OR_53d08
+  - action: action_museum
+- story: citywalks flow
+  steps:
+  - intent: citywalks_flow
+  - action: utter_ask_citywalks_district
+  - intent: inform_location
+    entities:
+    - location: Kennedy Town
+  - checkpoint: GENR_OR_a0e47
+- story: citywalks flow
+  steps:
+  - intent: citywalks_flow
+  - action: utter_ask_citywalks_district
+  - intent: kg
+  - checkpoint: GENR_OR_a0e47
+- story: citywalks flow
+  steps:
+  - checkpoint: GENR_OR_a0e47
+  - action: action_citywalks
+  - intent: inform_location
+    entities:
+    - location: Kennedy Town
+  - checkpoint: GENR_OR_3eef4
+- story: citywalks flow
+  steps:
+  - checkpoint: GENR_OR_a0e47
+  - action: action_citywalks
+  - intent: kg
+  - checkpoint: GENR_OR_3eef4
+- story: citywalks flow
+  steps:
+  - checkpoint: GENR_OR_3eef4
+  - action: action_citywalks
+- story: route
+  steps:
+  - intent: route
+  - action: action_route
+  - intent: inform_location
+    entities:
+    - location: Kennedy Town
+  - checkpoint: GENR_OR_26663
+- story: route
+  steps:
+  - intent: route
+  - action: action_route
+  - intent: kg
+  - checkpoint: GENR_OR_26663
+- story: route
+  steps:
+  - checkpoint: GENR_OR_26663
+  - action: action_route
+- story: sightseeinglocation flow
+  steps:
+  - intent: sightseeinglocation_flow
+  - action: action_sightseeinglocation
+  - intent: sightseeing_flow
+    entities:
+    - sightseeing: Tsim Sha Tsui
+  - action: action_sightseeinglocation
+- story: genaral_flow
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask
+  - action: utter_get_greet          

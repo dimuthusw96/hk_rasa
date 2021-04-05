@@ -1,0 +1,2493 @@
+version: "2.0"
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - good morning
+    - good evening
+    - hey there
+    - Hi bot
+    - Hey bot
+    - hi again
+    - hi folks
+    - hi Mister
+    - hi pal!
+    - hi there
+    - greetings
+    - hello everybody
+    - hello is anybody there
+    - hello robot
+    - hallo
+    - heeey
+    - hi hi
+    - hey hey
+    - hello there
+    - yo
+    - hola
+    - hi?
+    - hey bot!
+    - hello friend
+- intent: callname
+  examples: |
+    - Alice
+    - Miss Alice
+- intent: bye
+  examples: |
+    - bye
+    - goodbye
+    - see you around
+    - see you later
+- intent: thankz
+  examples: |
+    - thank you
+    - thanks
+    - thank you very much
+    - tks
+    - thx
+    - thanks a lot
+    - much thanks
+    - um thank you good bye
+    - okay cool uh good bye thank you
+    - okay thank you good bye
+    - you rock
+    - and thats all thank you and good bye
+    - thank you and good bye
+    - sorry about my mistakes thank you good bye
+    - noise thank you good bye
+    - thank you goodbye noise
+    - okay thank you goodbye
+    - uh thank you good bye
+    - thank you goodbye
+    - thank you goodbye noise thank you goodbye
+    - breath thank you goodbye
+    - okay thank you
+    - thanks goodbye
+    - ah thank you goodbye
+    - thank you noise
+    - thank you good bye
+    - breath thank you very much goodbye
+    - noise thank you goodbye
+    - unintelligible thank you goodbye
+    - uh okay thank you good bye
+    - thank you bye
+    - um okay thank you good bye
+- intent: refuse
+  examples: |
+    - no
+    - no new selection
+    - no thanks
+    - no thank you
+    - uh no
+    - breath no
+    - do you have something else
+    - no this does not work for me
+- intent: stop
+  examples: |
+    - ok then you cant help me
+    - that was shit, you're not helping
+    - you can't help me
+    - you can't help me with what i need
+    - i guess you can't help me then
+    - ok i guess you can't help me
+    - that's not what i want
+    - ok, but that doesnt help me
+    - this is leading to nothing
+    - this conversation is not really helpful
+    - you cannot help me with what I want
+    - I think you cant help me
+    - hm i don't think you can do what i want
+    - stop
+    - stop go back
+    - do you get anything?
+    - and you call yourself bot company? pff
+    - and that's it?
+    - nothing else?
+- intent: out_of_scope
+  examples: |
+    - I want to order a pizza
+    - book a plane ticket
+    - finance news
+- intent: accommodation_flow
+  examples: |
+    - Accommodation
+- intent: events_flow
+  examples: |
+    - flow Events
+- intent: immigration_flow
+  examples: |
+    - flow Immigration
+- intent: transport_flow
+  examples: |
+    - flow Transport
+- intent: sightseeing_flow
+  examples: |
+    - flow Sightseeing
+    - Any must visit places?
+    - Any must see places?
+    - Any attractions I must see?
+    - Any sightseeing places you recommend?
+    - What are the must visit places?
+    - What are the must see places?
+    - What attractions you recommend?
+    - What sightseeing places you recommend?
+    - What are the most popular attractions that I must see?
+    - What must see places you recommend?
+    - What are the famous attractions in Hong Kong?
+    - What are the famous attractions I must see?
+    - Where to go?
+    - What to see in Hong Kong?
+    - What's popular in town
+    - What is popular in Hong Kong?
+    - Most popular
+    - famous in Hong Kong
+    - Sightseeing
+    - must see
+    - popular in town
+    - popular
+    - popular sightseeing
+    - famous sightseeing
+    - famous
+    - can you recomment places to go in HK for me
+    - can you tell me places to visit in HK
+    - places to go
+    - places to visit
+    - places to visit in HK
+    - can you tell me where to visit in HK
+    - places to go in hk
+    - can you tell me places to go in hk
+    - can you tell me places to go in Hong Kong
+    - can you tell me where to go in hk
+    - can you introduce places to go in HK for me
+    - introduce places
+    - Sights to see
+    - sightsee
+    - what are the best sights to see in HK
+    - what should i go sightsee
+    - [Key Attractions](sightseeing)
+- intent: museum_flow
+  examples: |
+    - Any museums suggestions?
+    - Any museums you recommned?
+    - museum
+    - museums
+- intent: hiking_flow
+  examples: |
+    - Any green and hiking suggestions?
+    - I want to explore the nature. Any suggestions?
+    - I want to explore the countryside. Any suggestions?
+    - hiking
+    - nature
+    - experience nature
+    - eco tourism
+    - green tourism
+    - where can i experience nature
+    - ecotourism
+    - experience natural scenery
+    - Any green and hiking suggestions [Within 2 hours](hiking_duration)?
+    - Any green and hiking suggestions [2 to 4 hours](hiking_duration)?
+    - Any green and hiking suggestions [4 to 6 hours](hiking_duration)?
+    - Any green and hiking suggestions [More than 6 hours](hiking_duration)?
+- intent: shoppingmall_flow
+  examples: |
+    - Where is the biggest shopping mall?
+    - Which shopping mall is the biggest one?
+    - Which is the best shopping mall?
+    - Which shopping mall is the best?
+    - Which shopping mall you recommend?
+    - Any shopping mall that you recommend?
+    - What shopping malls have ladies fashion?
+    - What shopping malls have the more ladies fashion?
+- intent: departmentstore_flow
+  examples: |
+    - Any department store in Hong Kong?
+    - Where is the department store?
+    - Which is the best department store?
+    - department store
+    - i want to go department store
+- intent: menu
+  examples: |
+    - Buy suitcases in Tsim Sha Tsui
+    - Attractions near Tsim Sha Tsui
+- intent: route
+  examples: |
+    - from [Tsim Sha Tsui](location_from) to [Shatin](location_to)
+- intent: route_flow
+  examples: |
+    - transport route
+- intent: gettingthere
+  examples: |
+    - how to get there
+    - Please tell me the fastest way to go to [Shenzhen](city)
+    - Please tell me the fastest way to go to [Guangzhou](city)
+    - Please tell me the fastest way to go to [Zhuhai](city)
+    - Please tell me the fastest way to go to [Macau](city)
+    - Where can I find a [MTR](facility) station?
+    - Where is the nearest [MTR](facility) station?
+    - How to go to the peak
+    - how to go to hong kong disneyland
+    - how to go to wong tai sin temple
+    - how to go to temple street
+    - how to go to ocean park hong kong
+    - how to go to disneyland
+    - How to go to Ocean Park from my hotel?
+    - Getting there?
+    - How to go?
+    - What public transport should I take?
+    - Can I take a bus?
+    - Where can I find a [convenience store](facility)?
+    - Any [convenience store](facility) near my hotel?
+    - Any [24-hour shop](facility) in Hong Kong?
+    - Where is the [convenience store](facility)?
+    - Where is the [24-hour shop](facility)?
+    - Where can I find a [supermarket](facility)?
+    - Any [supermarket](facility) near my hotel?
+    - Any [supermarket](facility) that you recommend?
+    - Where can I [buy fresh food]{"entity": "facility", "value": "supermarket"} for cooking?
+    - Where can I [buy fresh fruits]{"entity": "facility", "value": "supermarket"}?
+    - Where can I [buy food]{"entity": "facility", "value": "supermarket"} for cooking?
+    - Where can I [buy fruits]{"entity": "facility", "value": "supermarket"}?
+    - Where can I get some [grocery]{"entity": "facility", "value": "supermarket"}?
+    - where is the [convenience store](facility)?
+    - i want to [buy fruits]{"entity": "facility", "value": "supermarket"}
+    - where are the [grocery store]{"entity": "facility", "value": "supermarket"}?
+    - Any [pharmacy](pharmacy) that you recommend?
+    - Where can I [buy over-the-counter medications](pharmacy)?
+    - Where can I [get over-the-counter medications](pharmacy)?
+    - Where can I [get some common medications](pharmacy)?
+    - Where can I [get some common medicine](pharmacy)?
+    - Where can I [get some common pills](pharmacy)?
+    - Where can I [get medications](pharmacy)?
+    - Where can I [get medicine](pharmacy)?
+    - Where can I [get pills](pharmacy)?
+    - Where can I [buy medications](pharmacy)?
+    - Where can I [buy medicine](pharmacy)?
+    - Where can I [buy pills](pharmacy)?
+    - Where can I [buy beauty and skincare products](pharmacy)?
+    - Where can I [buy cosmetics products](pharmacy)?
+    - Where can I [buy health supplements](pharmacy)?
+    - Where can I [buy dietary supplements](pharmacy)?
+    - Where can I [buy supplements](pharmacy)?
+    - Where can I [buy products](pharmacy)?
+    - where to [buy medicines](pharmacy)?
+    - where to [buy panadol](pharmacy)?
+- intent: googlemap
+  examples: |
+    - report a crime near Tsim Sha Tsui
+    - Buy suitcases in Tsim Sha Tsui
+    - banks in Tsim Sha Tsui
+- intent: inform_location
+  examples: |
+    - [Kennedy Town](location)
+    - [Sai Ying Pun](location)
+    - [Sheung Wan](location)
+    - [Central](location)
+    - [Admiralty](location)
+    - [Wan Chai](location)
+    - [Causeway Bay](location)
+    - [Tin Hau](location)
+    - [Fortress Hill](location)
+    - [North Point](location)
+    - [Quarry Bay](location)
+    - [Tai Koo](location)
+    - [Sai Wan Ho](location)
+    - [Shau Kei Wan](location)
+    - [Heng Fa Chuen](location)
+    - [Chai Wan](location)
+    - [Wong Chuk Hang](location)
+    - [Lei Tung](location)
+    - [South Horizons](location)
+    - [Tsim Sha Tsui](location)
+    - [Jordon](location)
+    - [Yau Ma Tei](location)
+    - [Mong Kok](location)
+    - [Prince Edward](location)
+    - [Sham Shui Po](location)
+    - [Cheung Sah Wan](location)
+    - [Lai Chi Kok](location)
+    - [Mei Foo](location)
+    - [Lai King](location)
+    - [Kwai Fong](location)
+    - [Kwai Hing](location)
+    - [Tai Wo Hau](location)
+    - [Tsuen Wan](location)
+    - [Whampoa](location)
+    - [Ho Man Tin](location)
+    - [Shek Kip Mei](location)
+    - [Kowloon Tong](location)
+    - [Lok Fu](location)
+    - [Wong Tai Sin](location)
+    - [Diamond Hill](location)
+    - [Choi Hung](location)
+    - [Kowloon Bay](location)
+    - [Ngau Tau Kok](location)
+    - [Kwun Tong](location)
+    - [Lam Tin](location)
+    - [Yau Tong](location)
+    - [Tiu Keng Leng](location)
+    - [LOHAS Park](location)
+    - [Tseung Kwan O](location)
+    - [Hang Hau](location)
+    - [Po Lam](location)
+    - [Hung Hom](location)
+    - [Mong Kok East](location)
+    - [Shatin](location)
+    - [Fo Tan](location)
+    - [Tai Po](location)
+    - [Tai Wo](location)
+    - [Fanling](location)
+    - [Sheung Shui](location)
+    - [Lo Wu](location)
+    - [Lok Ma Chau](location)
+    - [East Tsim Sha Tsui](location)
+    - [Austin](location)
+    - [Nam Cheong](location)
+    - [Tsuen Wan West](location)
+    - [Kam Sheung Road](location)
+    - [Yuen Long](location)
+    - [Long Ping](location)
+    - [Tin Shui Wai](location)
+    - [Siu Hong](location)
+    - [Tuen Mun](location)
+    - [Tsing Yi](location)
+    - [Sunng Bay](location)
+    - [Tung Chung](location)
+    - [Olympic](location)
+    - [West Kowloon](location)
+    - [Kowloon City](location)
+    - [New Territories](location)
+    - [Kowloon](location)
+    - [Hong Kong Island](location)
+    - [Tai Kok Tsui](location)
+    - [Stanley](location)
+    - [The Peak](location)
+    - [Aberdeen](location)
+    - [Sai Kung](location)
+    - [Islands District](location)
+    - [Cheung Chau](location)
+    - [Lamma Island](location)
+    - [Mui Wo](location)
+    - [Tai O](location)
+    - [Ngong Ping](location)
+    - 30 Canton Rd, Tsim Sha Tsui
+    - east tsim sha tsui
+    - kowloon centre
+    - Star Ferry Pier, Tsim Sha Tsui.
+    - my gps location is
+- intent: dining_flow
+  examples: |
+    - dining flow
+    - Do I need to pay a tip?
+    - Any bars or pubs with live music you recommend?
+    - Any restaurant with live music you recommend?
+    - Where to go for bars or pubs with live music?
+    - Where to go for restaurant with live music?
+    - Any jazz bar in Hong Kong?
+    - Is there any restaurant with Cantonese Opera?
+    - Any nightlife district in Hong Kong?
+    - Any bars or pubs district in Hong Kong?
+    - Any roof top bar in Hong Kong?
+    - Which is the highest bar in Hong Kong?
+    - Where to go for roof top bar?
+    - Any bars with harbour view you recommend?
+    - Where to go for bar with harbour view?
+    - Any bar with harbour view and see sunset you recommend?
+    - Where can I try local beer?
+    - Is Lan Kwai Fong dangerous？
+    - Is it safe to go Lan Kwai Fong alone?
+    - Any restaurant with harbour view you recommend?
+    - Any restaurant you recommend to see harbour view?
+    - Which restaurant has harbour view?
+    - Any restaurant where I can enjoy the night views of Hong Kong?
+    - Any restaurant you recommend to see the night view?
+    - Any restaurants where I can see fireworks?
+    - Any restaurant you recommend to watch fireworks?
+    - Which restaurant I can enjoy fireworks?
+    - Any Michelin restaurant you recommend?
+    - Can you give me the latest list of Michelin restaurants?
+    - How can I have dinner on a junk boat?
+    - Any restaurant you recommend to watch Symphony of Lights show?
+    - Any restaurant to watch Symphony of Lights show you recommend?
+    - Can you recommend some organic cafe or restaurant?
+    - Any restaurants I can see bird cages?
+    - Any restaurants where I can see dim sum trolley?
+    - Which is the best district to eat seafood in Hong Kong?
+    - Where can I buy seafood from fish market and then send to restaurant for cooking?
+    - Where can I find gluten free restaurants?
+    - Where can I find gluten free food?
+    - I am on gluten free diet. Any restaurants you recommend?
+    - Where can I find MSG free restaurants?
+    - I am allergic to milk. Where can I find food stores selling soya drinks?
+    - Where can I find restaurants that provide peanut free meals?
+    - Where can I find restaurants that provide nut free meals?
+    - I am allergic to peanuts. Any restaurants you recommend?
+    - I am allergic to nuts. Any restaurants you recommend?
+    - Any football bar in Hong Kong?
+    - Any sports bar in Hong Kong?
+    - Any billiards bar in Hong Kong?
+    - Any snooker bar in Hong Kong?
+    - Where is the sport bar district in Hong Kong?
+    - Where is the football bar district in Hong Kong?
+    - Any restaurant live broadcast football matches?
+    - Any bar or pub live broadcast football matches?
+    - Any restaurant live broadcast sport events?
+    - Any bar or pub live broadcast sport events?
+    - Any bar or pub live broadcast Rugby 7?
+    - Any bar or pub live broadcast Superbowl?
+    - Any street food district in Hong Kong?
+    - Any district with good street food you recommend?
+    - What are the popular street food?
+    - What kind of street food you recommend?
+    - Which is the must eat street food?
+    - Where can I eat clean street good?
+- intent: dining
+  examples: |
+    - Any good restaurant you recommend?
+    - Any romantic restaurant you recommend?
+    - Any Chinese restaurant you recommend?
+    - Any dim sum restaurant you recommend?
+    - Any seafood restaurant you recommend?
+    - Any halal restaurant you recommend?
+    - I am Muslim, any halal restaurant you recommend?
+    - Where to eat halal food in Hong Kong?
+    - Where to eat halal dim sum in Hong Kong?
+    - Any Canton restaurant you recommend?
+    - Any Guangdong restaurant you recommend?
+    - Any Hong Kong BBQ restaurant you recommend?
+    - Any Hong Kong barbecued restaurant you recommend?
+    - Any dinner cruise you recommend?
+    - Any Cha Chaan Teng you recommend?
+    - Any local restaurant you recommend?
+    - Where can I try the best barbecued pork?
+    - Where can I try the best roasted meat?
+    - Where can I try the best roasted goose?
+    - Where can I try the best roasted pork?
+    - Where can I try the best dim sum?
+    - Where can I try the best egg tart?
+    - Where can I try the best pineapple Bun?
+    - Where can I try the best fishball?
+    - Where can I try the best local dessert?
+    - Where can I try the best afternoon tea?
+    - Where can I try the best buffet?
+    - Where can I try the best hotpot?
+    - Where can I try the best wonton noodle?
+    - Where to eat seafood in Hong Kong?
+    - Where can I go for good barbecued goose or roast goose?
+    - Which restaurant have barbecued goose or roast goose?
+    - Any vegetarian restaurant you recommend?
+    - I am veggie, any vegetarian restaurant  you recommend?
+    - I am a vegan, any vegetarian restaurant  you recommend?
+    - I am a vegetarian, any vegetarian restaurant  you recommend?
+    - Where to eat vegetarian food in Hong Kong?
+    - Where to eat vegetarian dim sum in Hong Kong?
+    - Can you recommend some vegetarian restaurant?
+    - Where can i go for Dai pai dong in Hong Kong?
+    - Any good Dai pai dong you recommend?
+    - Which district in Hong Kong have Dai pai dong?
+    - Where to go for Dai pai dong?
+    - Where can i go for Dai pai dong?
+- intent: inform_restaurant
+  examples: |
+    - [Shine](restaurant)
+    - [Yadllie Plate](restaurant)
+- intent: inform_cuisine
+  examples: |
+    - [Western](cuisine)
+    - [Japanese](cuisine)
+    - [International](cuisine)
+    - [French](cuisine)
+    - [American](cuisine)
+    - [Chiu Chow](cuisine)
+    - [Sichuan](cuisine)
+    - [Hunan](cuisine)
+    - [Guangdong](cuisine)
+    - [Shanghai](cuisine)
+    - [Beijing](cuisine)
+    - [Test Cuisine 1](cuisine)
+    - [Peruvian](cuisine)
+    - [Hong Kong Style](cuisine)
+    - [Middle Eastern](cuisine)
+    - [Brazilian](cuisine)
+    - [Cuba](cuisine)
+    - [Taiwan](cuisine)
+    - [Indonesian](cuisine)
+    - [Indian](cuisine)
+    - [Jingchuanhu](cuisine)
+    - [Northeastern](cuisine)
+    - [Russian](cuisine)
+    - [African](cuisine)
+    - [Hakka](cuisine)
+    - [Malaysian](cuisine)
+    - [Singaporean](cuisine)
+    - [British](cuisine)
+    - [Egyptian](cuisine)
+    - [Thai](cuisine)
+    - [Dutch](cuisine)
+    - [Jewish](cuisine)
+    - [Vietnamese](cuisine)
+    - [Swiss](cuisine)
+    - [Portuguese](cuisine)
+    - [Village Food](cuisine)
+    - [Mongolia](cuisine)
+    - [German](cuisine)
+    - [Moroccan](cuisine)
+    - [Australian](cuisine)
+    - [Korean](cuisine)
+    - [Turkish](cuisine)
+    - [Belgian](cuisine)
+    - [Greek](cuisine)
+    - [Nepalese](cuisine)
+    - [Mediterranean](cuisine)
+    - [Spanish](cuisine)
+    - [Argentinian](cuisine)
+    - [Philippines](cuisine)
+    - [Austrian](cuisine)
+    - [Italian](cuisine)
+    - [Irish](cuisine)
+    - [Lebanon](cuisine)
+    - [Mexican](cuisine)
+    - [Sri Lanka](cuisine)
+    - [Xinjiang](cuisine)
+    - [Guangxi](cuisine)
+    - [Jiang Zhe](cuisine)
+    - [Hubei](cuisine)
+    - [Yunnan](cuisine)
+    - [Fujian](cuisine)
+    - [Guizhou](cuisine)
+    - [Shandong](cuisine)
+    - [Shanxi](cuisine)
+    - [Huaiyang](cuisine)
+    - [Shunde](cuisine)
+- intent: inform_dish
+  examples: |
+    - [Fine Dining](dish)
+    - [Hot Pot](dish)
+    - [Buffet](dish)
+    - [Dessert](dish)
+    - [Sushi](dish)
+    - [Sashimi](dish)
+    - [Organic Food](dish)
+    - [Salad](dish)
+    - [Juice](dish)
+    - [Big Bowl Feast](dish)
+    - [Chinese New Year Products](dish)
+    - [Omakase](dish)
+    - [Chicken Hot Pot](dish)
+    - [All Day Breakfast](dish)
+    - [All you can eat](dish)
+    - [Snake Soup](dish)
+    - [Meatless Menu](dish)
+    - [Korean Fried Chicken](dish)
+    - [Korean BBQ](dish)
+    - [Soup](dish)
+    - [Curry](dish)
+    - [Ramen](dish)
+    - [Wine](dish)
+    - [Seafood](dish)
+    - [Udon](dish)
+    - [Steam Hotpot](dish)
+    - [Vegetarian](dish)
+    - [Ice Cream](dish)
+    - [yogurt](dish)
+    - [Congee](dish)
+    - [BBQ](dish)
+    - [Chinese BBQ](dish)
+    - [Pizza](dish)
+    - [Dim Sum](dish)
+    - [Shanghai Hairy Crab](dish)
+    - [Food Stall Noodles](dish)
+    - [Hamburger](dish)
+    - [Robatayaki](dish)
+    - [Teppanyaki](dish)
+    - [Chinese Buns](dish)
+    - [Hot Chili Oil](dish)
+    - [Chinese Cake](dish)
+    - [Taiwanese Drink](dish)
+    - [Noodles](dish)
+    - [Rice Noodles](dish)
+    - [Wonton](dish)
+    - [Dumpling](dish)
+    - [Bakery](dish)
+    - [Herbal Tea](dish)
+    - [Herbal Cuisine](dish)
+    - [Skewer](dish)
+    - [Certified Halal Food](dish)
+    - [Kaiseki](dish)
+    - [Sweet Soup](dish)
+    - [Cake](dish)
+    - [Roast Meat](dish)
+    - [Sandwich](dish)
+    - [Fine Dried Seafood](dish)
+- intent: transit
+  examples: |
+    - I have 4 hours stopover in Hong Kong, what do you recommend?
+    - I have 4 hours layover in Hong Kong, what do you recommend?
+    - I have 4 hours transit in Hong Kong, what do you recommend?
+    - I have 4 hours stopover in Hong Kong, any suggestions?
+    - I have 4 hours layover in Hong Kong, any suggestions?
+    - I have 4 hours transit in Hong Kong, any suggestions?
+    - I will stay in Hong Kong for 4 hours before my onward flight, any suggestions?
+    - I will be transiting Hong Kong for 4 hours, any suggestions?
+    - I will be staying in Hong Kong from 8am to 12noon on Feb 28. Any suggestions?
+    - I will have a stopover in Hong Kong for 6 hours, any sightseeing tour?
+    - I will have a layover in Hong Kong for 6 hours, any sightseeing tour?
+    - Any recommendations for me if I only got 4 hours in Hong Kong?
+    - I will be transiting in Hong Kong for 4 hours, any suggestions for me?
+    - I will stopover in Hong Kong for 4 hours, any suggestions for me?
+    - I will have a layover in Hong Kong for 4 hours, any suggestions for me?
+    - I will be staying in Hong Kong for more than 10 hours, is there any lounges or hotel for a short stay?
+    - Can i visit some of the markets if I only stay in Hong Kong for 4-6 hours?
+    - Where can I go for shopping if I will be transiting in HK for 4 hours?
+    - Where can I go for shopping if I will be stopover in HK for 4 hours?
+    - Where can I go for shopping if I will have a layover in HK for 4 hours?
+    - I will have 4 hours stopover in HK, where should I go?
+    - I will have 4 hours layover in HK, where should I go?
+    - I will have a long layover today and will have a connecting flight next day morning, where should I go?
+    - I will have a connecting flight at 1200am, where should I go?
+    - I will have a connecting flight at midnight, where should I go?
+    - What do you recommend during my transit?
+    - What do you recommend during my stopover?
+    - What do you recommend during my layover?
+    - I will transit to Hong Kong on Feb 28. Is there enough time for me to go to town?
+    - I will transit to Hong Kong on Feb 28. Is there enough time for me to explore the city?
+    - I will have a stopover in Hong Kong on Feb 28. Is there enough time for me to go to town?
+    - I will have a layover in Hong Kong on Feb 28. Is there enough time for me to explore the city?
+    - I will have a layover in Hong Kong, where should I go?
+    - I will have a layover in Hong Kong, are there any markets I can visit?
+    - I will have a stopover in Hong Kong, any recommendations?
+    - Any suggestions if I will have a layover in Hong Kong?
+    - I will have a connecting flight later, any recommendation to do in Hong Kong?
+    - I have limited time to stay in HK, anything worth to see?
+    - I will stay in Hong Kong [from 10am to 6pm tomorrow](duration), Any recommendations?
+- intent: inform_duration
+  examples: |
+    - [10 a.m. til 6 p.m. today](duration)
+    - [10 a.m. till 6 p.m. today](duration)
+    - [10 a.m. to 6 p.m. today](duration)
+    - [10 a.m. until 6 p.m. today](duration)
+    - [10 a.m.-6 p.m. today](duration)
+    - [10 o'clock til 6 o'clock today](duration)
+    - [10 o'clock till 6 o'clock today](duration)
+    - [10 o'clock to 6 o'clock today](duration)
+    - [10 o'clock until 6 o'clock today](duration)
+    - [10 o'clock-6 o'clock today](duration)
+    - [10 til 6 today](duration)
+    - [10 til 6pm today](duration)
+    - [10 till 6 today](duration)
+    - [10 till 6pm today](duration)
+    - [10 to 6 today](duration)
+    - [10 to 6pm today](duration)
+    - [10 until 6 today](duration)
+    - [10 until 6pm today](duration)
+    - [10:00 a.m. til 6:00 p.m. today](duration)
+    - [10:00 a.m. till 6:00 p.m. today](duration)
+    - [10:00 a.m. to 6:00 p.m. today](duration)
+    - [10:00 a.m. until 6:00 p.m. today](duration)
+    - [10:00 a.m.-6:00 p.m. today](duration)
+    - [10:00am til 6:00pm today](duration)
+    - [10:00am till 6:00pm today](duration)
+    - [10:00am to 6:00pm today](duration)
+    - [10:00am until 6:00pm today](duration)
+    - [10:00am-6:00pm today](duration)
+    - [1000 til 1800 today](duration)
+    - [1000 till 1800 today](duration)
+    - [1000 to 1800 today](duration)
+    - [1000 until 1800 today](duration)
+    - [1000-1800 today](duration)
+    - [1000hrs til 1800hrs today](duration)
+    - [1000hrs till 1800hrs today](duration)
+    - [1000hrs to 1800hrs today](duration)
+    - [1000hrs until 1800hrs today](duration)
+    - [1000hrs-1800hrs today](duration)
+    - [10-6 today](duration)
+    - [10-6pm today](duration)
+    - [10am til 6 today](duration)
+    - [10am til 6pm today](duration)
+    - [10am till 6 today](duration)
+    - [10am till 6pm today](duration)
+    - [10am to 6 today](duration)
+    - [10am to 6pm today](duration)
+    - [10am until 6 today](duration)
+    - [10am until 6pm today](duration)
+    - [10am-6 today](duration)
+    - [10am-6pm today](duration)
+    - [From today 10 a.m. til 6 p.m.](duration)
+    - [From today 10 a.m. till 6 p.m.](duration)
+    - [From today 10 a.m. to 6 p.m.](duration)
+    - [From today 10 a.m. until 6 p.m.](duration)
+    - [From today 10 a.m.-6 p.m.](duration)
+    - [From today 10 o'clock til 6 o'clock](duration)
+    - [From today 10 o'clock till 6 o'clock](duration)
+    - [From today 10 o'clock to 6 o'clock](duration)
+    - [From today 10 o'clock until 6 o'clock](duration)
+    - [From today 10 o'clock-6 o'clock](duration)
+    - [From today 10 til 6](duration)
+    - [From today 10 til 6pm](duration)
+    - [From today 10 till 6](duration)
+    - [From today 10 till 6pm](duration)
+    - [From today 10 to 6](duration)
+    - [From today 10 to 6pm](duration)
+    - [From today 10 until 6](duration)
+    - [From today 10 until 6pm](duration)
+    - [From today 10:00 a.m. til 6:00 p.m.](duration)
+    - [From today 10:00 a.m. till 6:00 p.m.](duration)
+    - [From today 10:00 a.m. to 6:00 p.m.](duration)
+    - [From today 10:00 a.m. until 6:00 p.m.](duration)
+    - [From today 10:00 a.m.-6:00 p.m.](duration)
+    - [From today 10:00am til 6:00pm](duration)
+    - [From today 10:00am till 6:00pm](duration)
+    - [From today 10:00am to 6:00pm](duration)
+    - [From today 10:00am until 6:00pm](duration)
+    - [From today 10:00am-6:00pm](duration)
+    - [From today 1000 til 1800](duration)
+    - [From today 1000 till 1800](duration)
+    - [From today 1000 to 1800](duration)
+    - [From today 1000 until 1800](duration)
+    - [From today 1000-1800](duration)
+    - [From today 10-6](duration)
+    - [From today 10-6pm](duration)
+    - [From today 10am til 6](duration)
+    - [From today 10am til 6pm](duration)
+    - [From today 10am till 6](duration)
+    - [From today 10am till 6pm](duration)
+    - [From today 10am to 6](duration)
+    - [From today 10am to 6pm](duration)
+    - [From today 10am until 6](duration)
+    - [From today 10am until 6pm](duration)
+    - [From today 10am-6](duration)
+    - [From today 10am-6pm](duration)
+    - [From today ten o'clock til six o'clock](duration)
+    - [From today ten o'clock till six o'clock](duration)
+    - [From today ten o'clock to six o'clock](duration)
+    - [From today ten o'clock until six o'clock](duration)
+    - [From today ten o'clock-six o'clock](duration)
+    - [From today ten til six](duration)
+    - [From today ten till six](duration)
+    - [From today ten to six](duration)
+    - [From today ten until six](duration)
+    - [From today ten-six](duration)
+    - [ten o'clock til six o'clock today](duration)
+    - [ten o'clock till six o'clock today](duration)
+    - [ten o'clock to six o'clock today](duration)
+    - [ten o'clock until six o'clock today](duration)
+    - [ten o'clock-six o'clock today](duration)
+    - [ten til six today](duration)
+    - [ten till six today](duration)
+    - [ten to six today](duration)
+    - [ten until six today](duration)
+    - [ten-six today](duration)
+    - [10 a.m. til 6 p.m., April 1](duration)
+    - [10 a.m. till 6 p.m., April 1](duration)
+    - [10 a.m. to 6 p.m., April 1](duration)
+    - [10 a.m. until 6 p.m., April 1](duration)
+    - [10 a.m.-6 p.m., April 1](duration)
+    - [10 o'clock til 6 o'clock, April 1](duration)
+    - [10 o'clock till 6 o'clock, April 1](duration)
+    - [10 o'clock to 6 o'clock, April 1](duration)
+    - [10 o'clock until 6 o'clock, April 1](duration)
+    - [10 o'clock-6 o'clock, April 1](duration)
+    - [10 til 6, April 1](duration)
+    - [10 til 6pm, April 1](duration)
+    - [10 till 6, April 1](duration)
+    - [10 till 6pm, April 1](duration)
+    - [10 to 6, April 1](duration)
+    - [10 to 6pm, April 1](duration)
+    - [10 until 6, April 1](duration)
+    - [10 until 6pm, April 1](duration)
+    - [10:00 a.m. til 6:00 p.m., April 1](duration)
+    - [10:00 a.m. till 6:00 p.m., April 1](duration)
+    - [10:00 a.m. to 6:00 p.m., April 1](duration)
+    - [10:00 a.m. until 6:00 p.m., April 1](duration)
+    - [10:00 a.m.-6:00 p.m., April 1](duration)
+    - [10:00am til 6:00pm, April 1](duration)
+    - [10:00am till 6:00pm, April 1](duration)
+    - [10:00am to 6:00pm, April 1](duration)
+    - [10:00am until 6:00pm, April 1](duration)
+    - [10:00am-6:00pm, April 1](duration)
+    - [1000 til 1800, April 1](duration)
+    - [1000 till 1800, April 1](duration)
+    - [1000 to 1800, April 1](duration)
+    - [1000 until 1800, April 1](duration)
+    - [1000-1800, April 1](duration)
+    - [1000hrs til 1800hrs, April 1](duration)
+    - [1000hrs till 1800hrs, April 1](duration)
+    - [1000hrs to 1800hrs, April 1](duration)
+    - [1000hrs until 1800hrs, April 1](duration)
+    - [1000hrs-1800hrs, April 1](duration)
+    - [10-6, April 1](duration)
+    - [10-6pm, April 1](duration)
+    - [10am til 6, April 1](duration)
+    - [10am til 6pm, April 1](duration)
+    - [10am till 6, April 1](duration)
+    - [10am till 6pm, April 1](duration)
+    - [10am to 6, April 1](duration)
+    - [10am to 6pm, April 1](duration)
+    - [10am until 6, April 1](duration)
+    - [10am until 6pm, April 1](duration)
+    - [10am-6, April 1](duration)
+    - [10am-6pm, April 1](duration)
+    - [April 1, 10 a.m. til 6 p.m.](duration)
+    - [April 1, 10 a.m. till 6 p.m.](duration)
+    - [April 1, 10 a.m. to 6 p.m.](duration)
+    - [April 1, 10 a.m. until 6 p.m.](duration)
+    - [April 1, 10 a.m.-6 p.m.](duration)
+    - [April 1, 10 o'clock til 6 o'clock](duration)
+    - [April 1, 10 o'clock till 6 o'clock](duration)
+    - [April 1, 10 o'clock to 6 o'clock](duration)
+    - [April 1, 10 o'clock until 6 o'clock](duration)
+    - [April 1, 10 o'clock-6 o'clock](duration)
+    - [April 1, 10 til 6](duration)
+    - [April 1, 10 til 6pm](duration)
+    - [April 1, 10 till 6](duration)
+    - [April 1, 10 till 6pm](duration)
+    - [April 1, 10 to 6](duration)
+    - [April 1, 10 to 6pm](duration)
+    - [April 1, 10 until 6](duration)
+    - [April 1, 10 until 6pm](duration)
+    - [April 1, 10:00 a.m. til 6:00 p.m.](duration)
+    - [April 1, 10:00 a.m. till 6:00 p.m.](duration)
+    - [April 1, 10:00 a.m. to 6:00 p.m.](duration)
+    - [April 1, 10:00 a.m. until 6:00 p.m.](duration)
+    - [April 1, 10:00 a.m.-6:00 p.m.](duration)
+    - [April 1, 10:00am til 6:00pm](duration)
+    - [April 1, 10:00am till 6:00pm](duration)
+    - [April 1, 10:00am to 6:00pm](duration)
+    - [April 1, 10:00am until 6:00pm](duration)
+    - [April 1, 10:00am-6:00pm](duration)
+    - [April 1, 1000 til 1800](duration)
+    - [April 1, 1000 till 1800](duration)
+    - [April 1, 1000 to 1800](duration)
+    - [April 1, 1000 until 1800](duration)
+    - [April 1, 1000-1800](duration)
+    - [April 1, 10-6](duration)
+    - [April 1, 10-6pm](duration)
+    - [April 1, 10am til 6](duration)
+    - [April 1, 10am til 6pm](duration)
+    - [April 1, 10am till 6](duration)
+    - [April 1, 10am till 6pm](duration)
+    - [April 1, 10am to 6](duration)
+    - [April 1, 10am to 6pm](duration)
+    - [April 1, 10am until 6](duration)
+    - [April 1, 10am until 6pm](duration)
+    - [April 1, 10am-6](duration)
+    - [April 1, 10am-6pm](duration)
+    - [April 1, ten o'clock til six o'clock](duration)
+    - [April 1, ten o'clock till six o'clock](duration)
+    - [April 1, ten o'clock to six o'clock](duration)
+    - [April 1, ten o'clock until six o'clock](duration)
+    - [April 1, ten o'clock-six o'clock](duration)
+    - [April 1, ten til six](duration)
+    - [April 1, ten till six](duration)
+    - [April 1, ten to six](duration)
+    - [April 1, ten until six](duration)
+    - [April 1, ten-six](duration)
+    - [ten o'clock til six o'clock, April 1](duration)
+    - [ten o'clock till six o'clock, April 1](duration)
+    - [ten o'clock to six o'clock, April 1](duration)
+    - [ten o'clock until six o'clock, April 1](duration)
+    - [ten o'clock-six o'clock, April 1](duration)
+    - [ten til six, April 1](duration)
+    - [ten till six, April 1](duration)
+    - [ten to six, April 1](duration)
+    - [ten until six, April 1](duration)
+    - [ten-six, April 1](duration)
+    - [Now to 6pm](duration)
+    - [Now-6pm](duration)
+    - [Now until 6pm](duration)
+    - [Now til 6pm](duration)
+    - [Now till 6pm](duration)
+    - [Now to 6 p.m.](duration)
+    - [Now-6 p.m.](duration)
+    - [Now until 6 p.m.](duration)
+    - [Now til 6 p.m.](duration)
+    - [Now till 6 p.m.](duration)
+    - [Now to 6:00pm](duration)
+    - [Now-6:00pm](duration)
+    - [Now until 6:00pm](duration)
+    - [Now til 6:00pm](duration)
+    - [Now till 6:00pm](duration)
+    - [Now to 6:00 p.m.](duration)
+    - [Now-6:00 p.m.](duration)
+    - [Now until 6:00 p.m.](duration)
+    - [Now til 6:00 p.m.](duration)
+    - [Now till 6:00 p.m.](duration)
+    - [Now to 6](duration)
+    - [Now-6](duration)
+    - [Now until 6](duration)
+    - [Now til 6](duration)
+    - [Now till 6](duration)
+    - [Now to 1800](duration)
+    - [Now-1800](duration)
+    - [Now until 1800](duration)
+    - [Now til 1800](duration)
+    - [Now till 1800](duration)
+    - [Now to 1800hrs](duration)
+    - [Now-1800hrs](duration)
+    - [Now until 1800hrs](duration)
+    - [Now til 1800hrs](duration)
+    - [Now till 1800hrs](duration)
+    - [Now to 6 o'clock](duration)
+    - [Now-6 o'clock](duration)
+    - [Now until 6 o'clock](duration)
+    - [Now til 6 o'clock](duration)
+    - [Now till 6 o'clock](duration)
+    - [Now to six o'clock](duration)
+    - [Now-six o'clock](duration)
+    - [Now until six o'clock](duration)
+    - [Now til six o'clock](duration)
+    - [Now till six o'clock](duration)
+    - [Now to six](duration)
+    - [Now-six](duration)
+    - [Now until six](duration)
+    - [Now til six](duration)
+    - [Now till six](duration)
+    - [10 a.m. today -6 p.m. tomorrow](duration)
+    - [10 a.m. today til 6 p.m. tomorrow](duration)
+    - [10 a.m. today till 6 p.m. tomorrow](duration)
+    - [10 a.m. today to 6 p.m. tomorow](duration)
+    - [10 a.m. today until 6 p.m. tomorrow](duration)
+    - [10 o'clock today -6 o'clock tomorrow](duration)
+    - [10 o'clock today til 6 o'clock tomorrow](duration)
+    - [10 o'clock today till 6 o'clock tomorrow](duration)
+    - [10 o'clock today to 6 o'clock tomorrow ](duration)
+    - [10 o'clock today until 6 o'clock tomorrow](duration)
+    - [10:00 a.m. today -6:00 p.m. tomorrow](duration)
+    - [10:00 a.m. today til 6:00 p.m. tomorrow](duration)
+    - [10:00 a.m. today till 6:00 p.m. tomorrow](duration)
+    - [10:00 a.m. today to 6:00 p.m. tomorrow](duration)
+    - [10:00 a.m. today until 6:00 p.m. tomorrow](duration)
+    - [10:00am today -6:00pm tomorrow](duration)
+    - [10:00am today til 6:00pm tomorrow](duration)
+    - [10:00am today till 6:00pm tomorrow](duration)
+    - [10:00am today to 6:00pm tomorrow](duration)
+    - [10:00am today until 6:00pm tomorrow](duration)
+    - [1000 today -1800 tomorrow](duration)
+    - [1000 today til 1800 tomorrow](duration)
+    - [1000 today till 1800 tomorrow](duration)
+    - [1000 today to 1800 tomorrow](duration)
+    - [1000 today until 1800 tomorrow](duration)
+    - [1000hrs today -1800hrs tomorrow](duration)
+    - [1000hrs today til 1800hrs tomorrow](duration)
+    - [1000hrs today till 1800hrs tomorrow](duration)
+    - [1000hrs today to 1800hrs tomorrow](duration)
+    - [1000hrs today until 1800hrs tomorrow](duration)
+    - [10am to 6pm tomorrow](duration)
+    - [10am today -6pm tomorrow](duration)
+    - [10am today til 6pm tomorrow](duration)
+    - [10am today till 6 tomorrow](duration)
+    - [10am today till 6pm tomorrow](duration)
+    - [10am today to 6pm tomorrow](duration)
+    - [10am today until 6pm tomorrow](duration)
+    - [10am today-6pm tomorrow](duration)
+    - [From today 10 a.m. til 6 p.m. tomorrow](duration)
+    - [From today 10 a.m. till tomorrow 6 p.m.](duration)
+    - [From today 10 a.m. to tomorrow 6 p.m.](duration)
+    - [From today 10 a.m.- tomorrow 6 p.m.](duration)
+    - [From today 10 a.m. until tomorrow 6 p.m.](duration)
+    - [From today 10 o'clock til tomorrow 6 o'clock](duration)
+    - [From today 10 o'clock to tomorrow 6 o'clock](duration)
+    - [From today 10 o'clock-6 o'clock tomorrow ](duration)
+    - [From today 10:00 a.m. til tomorrow 6:00 p.m.](duration)
+    - [From today 10:00 a.m. till tomorrow 6:00 p.m.](duration)
+    - [From today 10:00 a.m. to tomorrow 6:00 p.m.](duration)
+    - [From today 10:00 a.m.- tomorrow 6:00 p.m.](duration)
+    - [From today 10:00 a.m. until tomorrow 6:00 p.m.](duration)
+    - [From today 10:00am til tomorrow 6:00pm](duration)
+    - [From today 10:00am till tomorrow 6:00pm](duration)
+    - [From today 10:00am to tomorrow 6:00pm](duration)
+    - [From today 10:00am until tomorrow 6:00pm](duration)
+    - [From today 10:00am-tomorrow 6:00pm](duration)
+    - [From today 1000 til tomorro w1800](duration)
+    - [From today 1000 till tomorrow 1800](duration)
+    - [From today 1000 to tomorrow 1800](duration)
+    - [From today 1000 until 1800 tomorrow](duration)
+    - [From today 1000-tomorrow 1800](duration)
+    - [From today 10am - tomorrow 6pm](duration)
+    - [From today 10am til 6pm tomorrow](duration)
+    - [From today 10am til tomorrow 6pm](duration)
+    - [From today 10am till 6pm tomorrow](duration)
+    - [From today 10am till tomorrow 6pm](duration)
+    - [From today 10am to 6pm tomorrow](duration)
+    - [From today 10am to tomorrow 6pm](duration)
+    - [From today 10am- tomorrow 6pm](duration)
+    - [From today 10am until 6pm tomorrow](duration)
+    - [From today 10am until tomorrow 6pm](duration)
+    - [From today 10am-6pm tomorrow](duration)
+    - [From today ten o'clock til tomorrow six o'clock](duration)
+    - [From today ten o'clock till tomorrow six o'clock](duration)
+    - [From today ten o'clock to tomorrow six o'clock](duration)
+    - [From today ten o'clock- tomorrow six o'clock](duration)
+    - [From today ten o'clock until tomorrow six o'clock](duration)
+    - [From today ten til six tomorrow](duration)
+    - [From today ten till six tomorrow](duration)
+    - [From today ten to tomorrow six](duration)
+    - [From today ten until tomorrow six](duration)
+    - [From today ten-tomorrow six](duration)
+    - [ten o'clock today -six o'clock tomorrow](duration)
+    - [ten o'clock today til six o'clock tomorrow](duration)
+    - [ten o'clock today till six o'clock tomorrow](duration)
+    - [ten o'clock today to six o'clock tomorrow](duration)
+    - [ten o'clock today until six o'clock tomorrow](duration)
+    - [ten today -six tomorrow](duration)
+    - [ten today til six tomorrow](duration)
+    - [ten today till six tomorrow](duration)
+    - [ten today to six tomorrow](duration)
+    - [ten today until six tomorrow](duration)
+    - [10 a.m. Apr 1 -6 p.m. Apr 2](duration)
+    - [10 a.m. Apr 1 til 6 p.m. Apr 2](duration)
+    - [10 a.m. Apr 1 till 6 p.m. Apr 2](duration)
+    - [10 a.m. Apr 1 to 6 p.m. tomorow](duration)
+    - [10 a.m. Apr 1 until 6 p.m. Apr 2](duration)
+    - [10 o'clock Apr 1 -6 o'clock Apr 2](duration)
+    - [10 o'clock Apr 1 til 6 o'clock Apr 2](duration)
+    - [10 o'clock Apr 1 till 6 o'clock Apr 2](duration)
+    - [10 o'clock Apr 1 to 6 o'clock Apr 2 ](duration)
+    - [10 o'clock Apr 1 until 6 o'clock Apr 2](duration)
+    - [10:00 a.m. Apr 1 -6:00 p.m. Apr 2](duration)
+    - [10:00 a.m. Apr 1 til 6:00 p.m. Apr 2](duration)
+    - [10:00 a.m. Apr 1 till 6:00 p.m. Apr 2](duration)
+    - [10:00 a.m. Apr 1 to 6:00 p.m. Apr 2](duration)
+    - [10:00 a.m. Apr 1 until 6:00 p.m. Apr 2](duration)
+    - [10:00am Apr 1 -6:00pm Apr 2](duration)
+    - [10:00am Apr 1 til 6:00pm Apr 2](duration)
+    - [10:00am Apr 1 till 6:00pm Apr 2](duration)
+    - [10:00am Apr 1 to 6:00pm Apr 2](duration)
+    - [10:00am Apr 1 until 6:00pm Apr 2](duration)
+    - [1000 Apr 1 -1800 Apr 2](duration)
+    - [1000 Apr 1 til 1800 Apr 2](duration)
+    - [1000 Apr 1 till 1800 Apr 2](duration)
+    - [1000 Apr 1 to 1800 Apr 2](duration)
+    - [1000 Apr 1 until 1800 Apr 2](duration)
+    - [1000hrs Apr 1 -1800hrs Apr 2](duration)
+    - [1000hrs Apr 1 til 1800hrs Apr 2](duration)
+    - [1000hrs Apr 1 till 1800hrs Apr 2](duration)
+    - [1000hrs Apr 1 to 1800hrs Apr 2](duration)
+    - [1000hrs Apr 1 until 1800hrs Apr 2](duration)
+    - [10am to 6pm Apr 2](duration)
+    - [10am Apr 1 -6pm Apr 2](duration)
+    - [10am Apr 1 til 6pm Apr 2](duration)
+    - [10am Apr 1 till 6 Apr 2](duration)
+    - [10am Apr 1 till 6pm Apr 2](duration)
+    - [10am Apr 1 to 6pm Apr 2](duration)
+    - [10am Apr 1 until 6pm Apr 2](duration)
+    - [10am Apr 1-6pm Apr 2](duration)
+    - [From Apr 1 10 a.m. til 6 p.m. Apr 2](duration)
+    - [From Apr 1 10 a.m. till Apr 2 6 p.m.](duration)
+    - [From Apr 1 10 a.m. to Apr 2 6 p.m.](duration)
+    - [From Apr 1 10 a.m.- Apr 2 6 p.m.](duration)
+    - [From Apr 1 10 a.m. until Apr 2 6 p.m.](duration)
+    - [From Apr 1 10 o'clock til Apr 2 6 o'clock](duration)
+    - [From Apr 1 10 o'clock till 6 o'clock](duration)
+    - [From Apr 1 10 o'clock to Apr 2 6 o'clock](duration)
+    - [From Apr 1 10 o'clock until 6 o'clock](duration)
+    - [From Apr 1 10 o'clock-6 o'clock Apr 2 ](duration)
+    - [From Apr 1 10:00 a.m. til Apr 2 6:00 p.m.](duration)
+    - [From Apr 1 10:00 a.m. till Apr 2 6:00 p.m.](duration)
+    - [From Apr 1 10:00 a.m. to Apr 2 6:00 p.m.](duration)
+    - [From Apr 1 10:00 a.m.- Apr 2 6:00 p.m.](duration)
+    - [From Apr 1 10:00 a.m. until Apr 2 6:00 p.m.](duration)
+    - [From Apr 1 10:00am til Apr 2 6:00pm](duration)
+    - [From Apr 1 10:00am till Apr 2 6:00pm](duration)
+    - [From Apr 1 10:00am to Apr 2 6:00pm](duration)
+    - [From Apr 1 10:00am until Apr 2 6:00pm](duration)
+    - [From Apr 1 10:00am-Apr 2 6:00pm](duration)
+    - [From Apr 1 1000 til tomorro w1800](duration)
+    - [From Apr 1 1000 till Apr 2 1800](duration)
+    - [From Apr 1 1000 to Apr 2 1800](duration)
+    - [From Apr 1 1000 until 1800 Apr 2](duration)
+    - [From Apr 1 1000-Apr 2 1800](duration)
+    - [From Apr 1 10am - Apr 2 6pm](duration)
+    - [From Apr 1 10am til 6pm Apr 2](duration)
+    - [From Apr 1 10am til Apr 2 6pm](duration)
+    - [From Apr 1 10am till 6pm Apr 2](duration)
+    - [From Apr 1 10am till Apr 2 6pm](duration)
+    - [From Apr 1 10am to 6pm Apr 2](duration)
+    - [From Apr 1 10am to Apr 2 6pm](duration)
+    - [From Apr 1 10am- Apr 2 6pm](duration)
+    - [From Apr 1 10am until 6pm Apr 2](duration)
+    - [From Apr 1 10am until Apr 2 6pm](duration)
+    - [From Apr 1 10am-6pm Apr 2](duration)
+- intent: travel_macau
+  examples: |
+    - I will be staying in Hong Kong for 8 hours, can I go to Macau?
+    - I will have a layover in Hong Kong, is it possible to go to Macau?
+- intent: inform_departure
+  examples: |
+    - departure from [airport](departure_airport)
+    - departure from [downtown](departure_downtown)
+- intent: qa/attractions_topten
+  examples: |
+    - What are the top 10 attractions?
+    - top ten
+- intent: qa/attractions_suggestion
+  examples: |
+    - What can I see in Hong Kong?
+    - What to see in Hong Kong?
+    - what to see
+- intent: qa/attractions_brucelee
+  examples: |
+    - Where can I see Bruce Lee statue?
+    - Bruce Lee
+- intent: qa/attractions_bruceleehouse
+  examples: |
+    - Can I visit Bruce Lee old house?
+- intent: qa/attractions_movie
+  examples: |
+    - Where is the popular movie shooting places in Hong Kong?
+    - movie shooting places
+    - movie shooting location
+    - movie shooting
+- intent: qa/attractions_junk
+  examples: |
+    - Where can I see old chinese junk?
+    - chinese junk
+- intent: qa/attractions_rickshaw
+  examples: |
+    - Where can I take a picture with Rickshaw?
+    - rickshaw
+- intent: qa/attractions_citywalks
+  examples: |
+    - Any city walks suggestions?
+    - Any recommendations on city walks?
+    - Any interesting walks in HK?
+    - Any suggestions on self guided walks?
+    - Any self guided walks you recommend?
+    - citywalks
+    - citywalk
+    - walk
+    - wanna go for a walk
+    - where should I go for a walk
+- intent: qa/attractions_heritagewalks
+  examples: |
+    - Any heritage walks suggestions?
+    - Any heritage walks you recommend?
+    - heritage walks
+    - heritage walk
+- intent: qa/attractions_temple
+  examples: |
+    - Which temples should i visit in Hong Kong?
+    - Any famous temples in Hong Kong?
+    - temple
+    - temples
+- intent: qa/attractions_cycling
+  examples: |
+    - Any cycling routes you recommend?
+    - Any suggestions on cycling routes?
+    - cycling
+- intent: qa/attractions_things
+  examples: |
+    - Any cultural things to see in HK?
+- intent: qa/attractions_exhibitions
+  examples: |
+    - Any suggestions on major exhibitions I can visit?
+    - Any exhibitions you recommend?
+    - exhibitions
+    - exhibition
+- intent: qa/attractions_lesspopular
+  examples: |
+    - Any off the beaten track places I can visit?
+    - Any less popular places to visit?
+    - less popular
+- intent: qa/attractions_lantau
+  examples: |
+    - any suggestions for things to do in Lantau
+    - any suggestion where to visit on Lantau
+    - what to do on Lantau
+    - any recommendations for things to see on Lantau Island
+    - what to see on lantau island
+    - where to go on lantau island
+    - how to go to lantau island
+    - lantau
+- intent: qa/accom_budget
+  examples: |
+    - Any budget hotels?
+    - Any accommodation which are not expensive?
+    - I am a budget traveller. Can you recommend a place where I can stay?
+    - I am a budget traveller. Can you recommend any hostels?
+    - Any recommendation for budget traveller to stay?
+    - I am looking for a budget accommodation, can you help?
+    - Any budget accommodation available?
+    - Where can I find the budget accommodation in Hong Kong?
+    - How can I book the budget accommodation?
+    - Any suggestions on budget accommodation?
+    - I want to book a hostel.
+    - I am looking for a hostel, can you help?
+    - Any hostels available?
+    - Where can I find the hostels in Hong Kong?
+    - How can I book the hostels?
+    - Can you suggest any hostels?
+    - Can you suggest any budget accommodation?
+    - Can you recommend any hostels?
+    - Can you recommend any budget accommodation?
+    - Any suggestions on hostels?
+    - Can you help me to book a hostel?
+    - I want to book a budget hotel.
+    - Any hotels which are not expensive?
+    - hostel
+    - hostels
+    - budget hotel
+    - budget hotels
+    - cheap hotel
+    - cheap accommodation
+    - cheap guesthouse
+- intent: qa/accom_guesthouse
+  examples: |
+    - I am a budget traveller. Can you recommend any guesthouses?
+    - I want to book a guesthouse.
+    - I am looking for a guesthouse, can you help?
+    - Any guesthouses available?
+    - Where can I find the guesthouses in Hong Kong?
+    - How can I book the guesthouses?
+    - Can you suggest any guesthouses?
+    - Can you recommend any guesthouses?
+    - Any suggestions on guesthouses?
+    - Can you help me to book a guesthouse?
+    - guesthouse
+    - guesthouses
+- intent: qa/accom_recommendation
+  examples: |
+    - I've just arrived Hong Kong but haven't book any accommodation, any suggestions?
+    - Where can I book an accommodation?
+    - Can you help me to book an accomodation?
+    - Can you suggest any accommodation?
+    - Can you suggest any places to stay?
+    - Can you suggest any accommodation in good location?
+    - Can you recommend any accommodation?
+    - Can you recommend any places to stay?
+    - Can you recommend any accommodations in good location?
+    - Where is the best area to stay?
+    - I am looking for a place to stay, can you help?
+    - I am looking for accommodation to stay, can you help?
+    - I am looking for a place to stay, can you recommend any?
+    - I am looking for accommodation to stay, can you recommend any?
+    - Can you help me to book accommodation?
+    - Can you help me to find an accommodation?
+    - I've just arrived Hong Kong but haven't book a hotel, any suggestions?
+    - Any hotel rooms available?
+    - Where can I book a hotel?
+    - Can you help me to book a hotel?
+    - Can you suggest any hotels?
+    - Can you suggest any hotels in good location?
+    - Can you recommend any hotels?
+    - Can you recommend any hotels in good location?
+    - I am looking for a hotel, can you help?
+    - I am looking for a hotel, can you recommend any?
+    - Can you help me to find a hotel?
+    - I want to book a hotel.
+    - hotel
+    - hotels
+    - reserve a hotel
+    - book hotel
+    - I want to reserve hotel
+    - I want to book hotel
+- intent: qa/accom_airbnb
+  examples: |
+    - Any airbnb available?
+    - airbnb
+    - bnb
+    - air b&b
+- intent: qa/accom_airport
+  examples: |
+    - Any accommodations nearby the Airport?
+    - I will be stopover in HK for few hours,  do you have any accommodation recommend?
+    - I will be transit in HK, do you have any accommodation recommend?
+    - Can I book a hotel near the airport?
+    - Any hotels nearby the Airport?
+    - Is there any hotel near the Airport?
+    - Is there any accommodations near the Airport?
+    - Where can I stay if I will be stopover in HK for few hours?
+    - I will be stopover in HK for few hours,  do you have any hotels recommend?
+    - I will be transit in HK, do you have any hotels recommend?
+    - Accommodations near airport
+    - stopover hotel
+    - transit hotel
+- intent: qa/accom_studioflat
+  examples: |
+    - Where can I find a studio flat in Hong Kong?
+    - Any studio flat available?
+    - studio flat
+- intent: qa/accom_reliable
+  examples: |
+    - Any guesthouses that are reliable?
+    - Any accommodations that are reliable?
+    - reliable
+    - reliable hotel
+    - reliable accommodations
+    - tell me which hotel is reliable
+    - i want a reliable hotel
+- intent: qa/accom_disabled
+  examples: |
+    - Any hostels which are suitable for disabled?
+    - disabled
+    - disabled friendly hotel
+    - hotel that are disabled friendly
+    - list of hotel that accept disabled
+    - hotels for disabilities
+    - reduced mobility friendly hotel
+    - hotels for reduced mobility
+- intent: qa/accom_family
+  examples: |
+    - Any hotels that are suitable for family?
+    - Any hotels that has family rooms?
+    - Any hotels that can accommodate 4 members or more?
+    - Any hotels that can accommodate 4 people or more?
+    - family
+- intent: qa/accom_cooking
+  examples: |
+    - Any hotels that kitchen facilities?
+    - cooking
+    - kitchen
+- intent: qa/accom_dog
+  examples: |
+    - Which hotels allow me to bring along my eye-seeing dog?
+    - Any hotels that allow me to bring along my eye-seeing dog?
+    - dog
+    - hotel that accept service dog
+    - service dog
+    - guide dog
+    - hotels that accept guide dog
+    - seeing-eye dog friendly hotel
+    - can i have a list of seeing-eye dog hotel
+- intent: qa/accom_showerchair
+  examples: |
+    - Which hotels have shower chair facilities
+    - Can you recommend hotels that have shower chair facilities
+    - shower chair
+- intent: qa/accom_children
+  examples: |
+    - Which hotels have children facilities available?
+    - Any hotels that have children facilities available?
+    - children facilities
+- intent: qa/accom_yha
+  examples: |
+    - Any youth hostels available?
+    - Any YHA available?
+    - Can you suggest any youth hostels?
+    - Can you recommend any youth hostels?
+    - Any suggestions on youth hostels?
+    - YHA
+    - cheap youth hostel
+    - youth hostel
+- intent: qa/accom_discounts
+  examples: |
+    - Any hotel promotion?
+    - Any good deals on hotels?
+    - Any great offers on hotels?
+    - Any good offers on hotels?
+    - I am looking for hot deals on hotel packages.
+- intent: qa/transit_stopover
+  examples: |
+    - Any transit tour for my stopover?
+    - Can I join any tours during my stopover?
+    - Any transit tour for my layover?
+    - Can I join any tours during my layover?
+    - I will be transiting in Hong Kong for 6 hours, any sightseeing tour?
+- intent: qa/transit_freetours
+  examples: |
+    - Any free tours for my stopover?
+    - Any free tours for my layover?
+- intent: qa/transit_bustours
+  examples: |
+    - I will be transiting in Hong Kong for couple of hours, any bus tours from Airport?
+    - bus tours
+- intent: qa/transit_airport
+  examples: |
+    - where can I find the hotels close to the airport since I will have a layover in Hong Kong?
+    - airport hotels
+- intent: qa/transit_lounge
+  examples: |
+    - Are there any lounges in Airport since I will have a layover in Hong Kong?
+    - airport lounge
+- intent: qa/transit_exhibition
+  examples: |
+    - Are there any exhibitions in Hong Kong? I only got 4 hours transiting here.
+    - Can I go to any exhibitions if I have a short stay in Hong Kong?
+    - Any exhibitions can I go if i have a layover in Hong Kong?
+    - I will be staying in Hong Kong for 4 hours, any exhibitions can i visit?
+    - I will stopover in Hong Kong for 4 hours, any exhibitions can i visit?
+    - I will have a layover in Hong Kong for 4 hours, any exhibitions can i visit?
+- intent: qa/events
+  examples: |
+    - I will come to Hong Kong soon, what events I can join?
+    - I will come to Hong Kong soon, what festivals I can go?
+    - I will come to Hong Kong soon, what special events I can visit?
+    - I will come to Hong Kong soon, what event I can participate?
+    - I will visit Hong Kong soon, what festivals I can see?
+    - I will visit Hong Kong soon, any events I can see?
+    - Do you have any events recommendation?
+    - Do you have any festival suggestions?
+    - Any events I should not miss?
+    - Any festivals I should not miss?
+    - What events worth visiting?
+    - Any events suitable for family?
+    - Any child friendly activities?
+    - Are there any events in coming days?
+    - Are there any upcoming concerts?
+    - What concerts are coming to Hong Kong?
+    - Any exhibitions recently?
+    - Any worth watching performances?
+    - Are there any Cantonese Opera performances?
+    - Where can I see Cantonese Opera performances？
+    - Where can I watch Cantonese Opera performances？
+    - Are there any free events?
+    - How to buy tickets?
+    - How to book the event tickets?
+    - How to book tickets?
+    - How to reserve event tickets?
+    - What are the upcoming sports events?
+    - Any new year celebrations in Hong Kong?
+    - Any Chinese New Year celebrations in Hong Kong?
+    - Any Christmas events in Hong Kong?
+    - Any celebrations during Christmas holidays?
+    - Any Mid Autumn Festival events in Hong Kong?
+    - Any celebrations during Mid Autumn Festival?
+    - Any Dragon Boat Festival events in Hong Kong?
+    - Any celebrations during Dragon Boat Festival?
+    - Are there any events in summer?
+    - Any events during summer holidays?
+    - Are there any winter events in Hong Kong?
+    - Any year-end events in Hong Kong?
+    - Any year-end celebrations in Hong Kong?
+    - Are there any shopping festivals?
+    - When will the shopping festival start?
+- intent: qa/trans_businfo
+  examples: |
+    - How to find bus information?
+    - Do I need to waive to stop a bus?
+    - How to take bus?
+    - Does bus accept credit card?
+    - Does bus run overnight?
+    - How much is bus fare?
+    - bus information
+    - bus fare
+- intent: qa/trans_largesuitcase
+  examples: |
+    - Can I take bus with my large suitcase?
+    - I have large luggage, what transportation can I take?
+    - Can I take MTR with my large suitcase?
+- intent: qa/trans_gotochina
+  examples: |
+    - How to go to China?
+    - How can I travel to China?
+- intent: qa/trans_gotosz
+  examples: |
+    - How to go to Shenzhen?
+    - Can I go to Shenzhen by ferry?
+    - Please tell me the cheapest way to go to Shenzhen.
+- intent: qa/trans_gotoszair
+  examples: |
+    - How to go to Shenzhen Airport?
+    - Can I go to Shenzhen Airport by ferry?
+- intent: qa/trans_gotogz
+  examples: |
+    - How to go to Guangzhou?
+    - Please tell me the cheapest way to go to Guangzhou.
+    - Travel to Guangzhou
+- intent: qa/trans_gotozhuhai
+  examples: |
+    - How to go to Zhuhai?
+    - Please tell me the cheapest way to go to Zhuhai.
+- intent: qa/trans_gettingarround
+  examples: |
+    - Is local transport easy to use?
+- intent: qa/trans_elderly
+  examples: |
+    - Does elderly have transportation discount?
+- intent: qa/trans_child
+  examples: |
+    - Does child have transportation discount?
+    - Child discount on transport
+- intent: qa/trans_bookcar
+  examples: |
+    - How to book a car?
+- intent: qa/trans_bookcoach
+  examples: |
+    - I travel with a large group, any coach service?
+- intent: qa/trans_drive
+  examples: |
+    - Can I drive in Hong Kong?
+- intent: qa/trans_overnight
+  examples: |
+    - I need to arrive Airport early in the morning, what should I take?
+- intent: qa/trans_budget
+  examples: |
+    - Please tell me the cheapest transportation to go to Airport。
+- intent: qa/trans_uber
+  examples: |
+    - Can I use Uber in Hong Kong?
+- intent: qa/trans_crossborder
+  examples: |
+    - I need cross border bus information.
+- intent: qa/trans_hzmbbridge
+  examples: |
+    - Can I drive to Macau via the HZMBridge?
+    - Can I drive to Macau via the Bridge?
+    - Can I drive to Macau via the HZMB?
+- intent: qa/trans_gotomacau
+  examples: |
+    - Can I take a taxi to Macau?
+    - How to go to Macau?
+    - Please tell me the cheapest way to go to Macau.
+    - How to buy ticket to Macau?
+- intent: qa/trans_macaulate
+  examples: |
+    - How late should I come back from Macau?
+- intent: qa/trans_macauferry
+  examples: |
+    - Does Macau ferry run overnight?
+    - How frequent is the ferry to Macau?
+    - Any jetfoil to Macau?
+    - I want to take ferry to Macau
+- intent: qa/trans_macaufromair
+  examples: |
+    - Can I travel to Macau from airport directly?
+- intent: qa/trans_macaubus
+  examples: |
+    - How to catch a coach bus to Macau?
+    - Can I take a bus to Macau?
+    - Can I go to Macau by land transport?
+- intent: qa/trans_mrtticket
+  examples: |
+    - Do I need a MTR day pass?
+    - Does MTR accept credit card?
+    - where can i buy mtr tourist ticket?
+    - mtr tourist ticket
+- intent: qa/trans_mrt
+  examples: |
+    - Does MTR station has elevator?
+    - Does MTR station has escalator?
+    - I need a MTR map.
+    - I need a MTR timetable.
+    - Does MTR run overnight?
+    - How much is MTR fare?
+    - mtr timeable
+    - what time does the mtr close
+    - i want to know the service hours of the mtr
+    - mtr service hours
+- intent: qa/trans_octopus
+  examples: |
+    - What Octopus should I get?
+    - Which Octopus is the best?
+    - How much is an Octopus?
+    - Can I use 1 Octopus for my whole family?
+    - How to refund my Octopus？
+    - I have left Hong Kong, how can I refund my Octopus?
+    - What is an Octopus?
+    - Can I buy an Octopus with credit card?
+    - Where can I buy an Octopus?
+    - Are other currencies accepted or can I only buy an Octopus with Hong Kong Dollars?
+    - Can I use the Octopus on ferries?
+    - Can I use the Octopus on taxis?
+    - How much is a child Octopus?
+    - I bought an Octopus when I visited Hong Kong last time. Can I use it again?
+    - Octopus card
+- intent: qa/trans_taxi
+  examples: |
+    - Where can I take a taxi?
+    - Can I book a taxi?
+    - Does taxi accept credit card?
+    - Does taxi accept Octopus?
+    - Does taxi have night surcharge?
+    - How much is taxi fare?
+    - Is every piece of baggage charged when taking a taxi?
+    - Is every piece of luggage charged when taking a taxi?
+    - How many suitcase can a taxi take?
+    - How many person can a taxi take?
+- intent: qa/trans_touristpass
+  examples: |
+    - Any tourist pass for transportations?
+    - Any tourist pass for public transport?
+    - Can you tell me the details of the 3 day pass?
+- intent: qa/trans_tram
+  examples: |
+    - Where can I take a tram
+    - Where does tram go?
+    - How much is tram fare?
+    - I need a tram timetable.
+    - How to get on the tram?
+    - Where to take ding ding?
+- intent: qa/trans_ferrytochina
+  examples: |
+    - Ferries to Guangzhou
+    - Can I take a ferry to China?
+- intent: qa/im_unaccompanied
+  examples: |
+    - What is the arrangement for entry of unaccompanied minors to Hong Kong?
+    - I will bring my nephew to Hong Kong, what document do I need to show to Immigration?
+    - Can my child visit Hong Kong alone?
+    - Can my child visit Hong Kong with his relatives?
+- intent: qa/im_noparent
+  examples: |
+    - Do I need a parent consent for bringing their children to Hong Kong?
+    - I will bring my nephew to Hong Kong, do I need an authorization letter from their parents?
+    - What is the arrangement for single parent bringing their children to Hong Kong?
+- intent: qa/im_parentpassport
+  examples: |
+    - Is it ok for children travelling with parents' passport?
+- intent: qa/im_chinavisa
+  examples: |
+    - Can I apply China Visa through you?
+    - Do you have China Visa service?
+    - Where is the China Visa Office?
+- intent: qa/im_chinavisaairport
+  examples: |
+    - Can I apply a China visa at airport?
+- intent: qa/im_szvisa
+  examples: |
+    - Does Shenzhen have visa on arrival?
+    - Does Shenzhen have landing visa?
+    - Can I get a visa on arrival to Shenzhen?
+    - Can I get a landing visa to Shenzhen?
+- intent: qa/im_visafree
+  examples: |
+    - How to get the 144 hours Visa free visit to China?
+    - Can I get the 144 hours Visa free visit to China?
+    - How do I apply for a 144 hour visa?
+- intent: qa/im_visathreeday
+  examples: |
+    - Do I need a visa to visit China for 3 days?
+    - How do I get a 72 hour visa for China?
+- intent: qa/im_departuretax
+  examples: |
+    - How much is the departure tax?
+- intent: qa/im_echannel
+  examples: |
+    - How to apply e-Channel?
+    - I am a frequent visitor, can I use the e-Channel?
+    - Does Hong Kong have express channel for frequent visitors?
+    - Any frequent channels for visitors?
+- intent: qa/im_entryhk
+  examples: |
+    - How long can I stay in Hong Kong?
+    - What is the longest period I can stay in Hong Kong?
+    - How to apply Hong Kong Visa?
+    - Can you help apply Hong Kong Visa?
+    - Do you help apply Hong Kong Visa?
+    - How long is the passport validity requirement for visiting Hong Kong?
+    - My passport will be expired next week, can I still go to Hong Kong?
+    - My passport will be expired next month, can I still go to Hong Kong?
+    - My passport is valid less than six months, can I still visit Hong Kong?
+    - My passport is valid less than one month, can I still visit Hong Kong?
+    - My passport will expire shortly, can I still go to Hong Kong?
+    - My passport will be expired within a month. Can I still travel to Hong Kong?
+    - Do I need a visa to visit Hong Kong?
+    - Do I need to apply for a Hong Kong Visa?
+    - What countries need to apply Hong Kong Visa?
+    - What countries do not need to apply Hong Kong Visa?
+    - What countries are visa exempted?
+    - What are the visa-exempt countries?
+    - Where can I apply a Hong Kong Visa?
+    - Can I submit the application for visit visa to the nearest Chinese embassy or consulate?
+- intent: qa/im_extension
+  examples: |
+    - How to extend my visiting period in Hong Kong?
+    - How to apply extension of stay?
+- intent: qa/im_arrivalcard
+  examples: |
+    - Do I need to fill in the Immigration Card to Hong Kong?
+- intent: qa/im_lostpassport
+  examples: |
+    - What should I do if I lost my passport?
+- intent: qa/im_visamacau
+  examples: |
+    - Do I need a visa to visit Macau
+    - visa to visit Macau
+- intent: qa/im_landingvisa
+  examples: |
+    - Can I apply Visa on arrival in Hong Kong?
+    - Can I apply landing visa in Hong Kong?
+    - Do you have landing visa in Hong Kong?
+    - Do you have visa on arrival in Hong Kong?
+- intent: qa/im_regindian
+  examples: |
+    - Who can apply for Pre-arrival Registration for Indian Nationals?
+- intent: qa/im_regother
+  examples: |
+    - Do I need to apply for Pre-arrival Registration if I am transiting in Hong Kong?
+    - Are all Indian nationals required to apply for Pre-arrival Registration before visiting Hong Kong?
+    - Does Pre-arrival Registration have any restriction on age?
+    - I intend to visit Hong Kong together with my family. Do we need to apply for Pre-arrival Registration individually?
+    - Is there any charge for Pre-arrival Registration?
+    - Can I apply for Pre-arrival Registration outside India?
+    - How to apply for Pre-arrival Registration?
+    - What information is required for application for Pre-arrival Registration?
+    - How should I input information when applying for Pre-arrival Registration?
+    - How should I input my name when applying for Pre-arrival Registration?
+    - If my Indian passport does not show my alias, do I need to provide the information when applying for Pre-arrival Registration?
+    - If my Indian passport only shows my year of birth, how should I input my date of birth?
+    - How to input the place of birth when applying for Pre-arrival Registration?
+    - Do I need to provide or upload any supporting document when applying for Pre-arrival Registration?
+    - When will I know whether my application for Pre-arrival Registration is successfully or not?
+    - Do I need to have a sponsor in applying for Pre-arrival Registration?
+    - Can I apply for a new Pre-arrival Registration if my last registration is still valid?
+    - How many times can I enter Hong Kong for visit within the validity of Pre-arrival Registration?
+    - Can I seek to enter Hong Kong on the last day of the validity of Pre-arrival Registration?
+    - I intend to visit the HKSAR but my application for Pre-arrival Registration is unsuccessful. What should I do?
+- intent: qa/im_preregindian
+  examples: |
+    - Is it necessary to bring along the printout of the "Notification Slip for Pre-arrival Registration for Indian Nationals" (notification slip
+- intent: qa/cus_wine
+  examples: |
+    - How many bottles of alcohol can I bring to Hong Kong?
+    - How many bottles of wine can I bring to Hong Kong?
+    - alcohol
+    - wine
+- intent: qa/cus_animals
+  examples: |
+    - I want to visit Hong Kong with my dog, what should I do?
+    - I want to bring along my dog to Hong Kong, how to apply?
+    - I want to visit Hong Kong with my cat, what should I do?
+    - I want to bring along my cat to Hong Kong, how to apply?
+    - I want to visit Hong Kong with my pet, what should I do?
+    - I want to visit Hong Kong with my pet, how to apply?
+    - What is the application procedures of importing animals to Hong Kong?
+- intent: qa/cus_cash
+  examples: |
+    - I travel to Hong Kong with large amount of cash, do I need to declare?
+    - Is there a limit on the amount of cash that I can bring to Hong Kong?
+    - What is the maximum amount of cash that I can bring to Hong Kong?
+    - How much money can I bring to Hong Kong?
+    - How much cash can I bring to Hong Kong?
+    - cash
+    - money
+- intent: qa/cus_cigarettes
+  examples: |
+    - How many cigarettes can I bring to Hong Kong
+    - Does 19 cigarettes mean 19 boxes
+    - Can I bring e-cigarettes to Hong Kong
+    - Can I bring electronic cigarettes to Hong Kong
+    - Can I bring ecigarettes to Hong Kong
+    - Can I bring vape to Hong Kong
+    - Can I bring cigars to Hong Kong
+    - Can I bring pipe to Hong Kong
+    - Am I allowed to bring e-cigarettes to Hong Kong
+    - Am I allowed to bring electronic cigarettes to Hong Kong
+    - Am I allowed to bring ecigarettes to Hong Kong
+    - Am I allowed to bring pipe to Hong Kong
+    - Am I allowed to bring cigars to Hong Kong
+    - Is it legal to bring e-cigarettes to Hong Kong
+    - Is it legal to bring electronic cigarettes to Hong Kong
+    - Is it legal to bring ecigarettes to Hong Kong
+    - Is it legal to bring pipe to Hong Kong
+    - Is it legal to bring cigars to Hong Kong
+    - Is it legitimate to bring e-cigarettes to Hong Kong
+    - Is it legitimate to bring electronic cigarettes to Hong Kong
+    - Is it legitimate to bring ecigarettes to Hong Kong
+    - Is it legitimate to bring pipe to Hong Kong
+    - Is it legitimate to bring cigars to Hong Kong
+    - cigarettes
+    - e-cigarettes
+    - ecigarettes
+    - vape
+    - cigars
+    - pipe
+- intent: qa/cus_prohibited
+  examples: |
+    - What items am I prohibited from bringing into Hong Kong?
+    - What are the prohibited items?
+    - What items I cannot bring to Hong Kong?
+    - What should I not bring to Hong Kong?
+- intent: qa/cus_declare
+  examples: |
+    - What do I have to declare at Hong Kong customs?
+    - What items should I declare when arriving Hong Kong?
+    - Do I need to declare my jewellery when coming to Hong Kong?
+- intent: qa/cus_gold
+  examples: |
+    - Can I bring gold to Hong Kong?
+    - gold
+- intent: qa/cus_food
+  examples: |
+    - Can I bring vegetables to Hong Kong?
+    - Can I bring meat to Hong Kong?
+    - Can I bring seafood to Hong Kong?
+    - Can I bring pork to Hong Kong?
+    - fruit
+    - fruits
+    - vegetables
+    - meat
+    - seafood
+    - pork
+- intent: qa/cus_plants
+  examples: |
+    - Can I bring plants to Hong Kong?
+    - Can I bring flowers to Hong Kong?
+    - Can I bring bonsai to Hong Kong?
+    - plants
+    - flowers
+    - bonsai
+- intent: qa/cus_medicines
+  examples: |
+    - I am bringing some medicine to Hong Kong, what should I do?
+    - Can I bring medicine to Hong Kong?
+    - I need to take my medication with me to visit Hong Kong. Is it allowed?
+    - Am I allowed to bring along my medicine to Hong Kong?
+    - medicine
+    - medication
+    - medicines
+- intent: qa/shopping_tax
+  examples: |
+    - Are there any duty free department stores in the city?
+    - Is there any sales tax in Hong Kong?
+- intent: qa/shopping_shopping
+  examples: |
+    - Which district is the best shopping district?
+    - Any shopping district you recommend?
+    - best shopping district in hong kong
+    - best shopping district in hk
+    - Hong Kong's best shopping district please
+    - I want recommendation on shopping district
+- intent: qa/shopping_luxury
+  examples: |
+    - Where is the upmarket brand district?
+    - Which shopping mall have upmarket brand?
+    - where to buy luxury brand goods?
+    - where to buy high end goods?
+    - where to buy high end brand goods?
+    - where to buy gucci?
+    - where to buy LV in Hong Kong?
+    - where to buy gucci in Hong Kong?
+- intent: qa/shopping_reliable
+  examples: |
+    - Where can I find reliable shops?
+    - What is QTS shops?
+    - What is QTS?
+    - Where can I find a reliable tailor?
+    - Where can I find reliable Jewellery?
+    - Where can I buy good quality tea leaves?
+    - Where can I buy nice chopsticks?
+    - Where can I buy nice teapots?
+    - Where can I buy teaware?
+- intent: qa/shopping_sales
+  examples: |
+    - When are summer sales period in Hong Kong?
+    - When are winter sales period in Hong Kong?
+    - When are summer sales periods in Hong Kong?
+    - Are there any shopping fairs in Hong Kong now?
+    - Which shopping mall is having season sales now?
+    - Any shopping mall is having season sales now?
+    - When is the season sales in Hong Kong?
+    - When is the shopping sales?
+    - winter sale
+    - any shopping festival in hk?
+- intent: qa/shopping_coupon
+  examples: |
+    - Do you have any coupons for tourist?
+    - Any tourist discount in Hong Kong?
+    - i want shopping discounts
+    - Where can I find discount offers?
+    - any discount offers?
+- intent: qa/shopping_close
+  examples: |
+    - Do shops and restaurants close during long public holidays such as the Chinese New Year?
+- intent: qa/shopping_secondhand
+  examples: |
+    - Where can I find reliable second hand shops?
+- intent: qa/shopping_outlet
+  examples: |
+    - Where can I find reliable discounted brands shops?
+    - Any outlet mall in Hong Kong?
+    - Any outlets in Hong Kong?
+    - Any factory outlets in Hong Kong?
+- intent: qa/shopping_qipao
+  examples: |
+    - Where can I buy a Qipao dress?
+    - Where can I buy a Cheongsam?
+- intent: qa/shopping_souvenir
+  examples: |
+    - Any souvenir you recommended?
+    - Where can I buy Chinese calligraphy?
+    - Where can I buy "I Love Hong Kong" T-shirt?
+    - hk souvenirs
+    - hong kong souvenirs
+- intent: qa/shopping_nobrand
+  examples: |
+    - Where can I buy no brand clothes at a cheap price?
+- intent: qa/shopping_postcard
+  examples: |
+    - Do you sell any postcards?
+- intent: qa/shopping_sellsouvenir
+  examples: |
+    - Do you sell any souvenirs?
+    - what do you have for hk souvenirs?
+- intent: qa/shopping_fashion
+  examples: |
+    - Where can I buy local fashion stuff?
+- intent: qa/shopping_changing
+  examples: |
+    - Where can I find a reliable money exchange service?
+    - Where can I get the best exchange rate?
+- intent: qa/shopping_newmall
+  examples: |
+    - Where is the new shopping mall?
+- intent: qa/shopping_sportsbrand
+  examples: |
+    - What shopping malls have the more sports brands?
+- intent: qa/shopping_businesshour
+  examples: |
+    - When do shopping malls normally close?
+    - What time do shopping malls normally close?
+    - Do the malls close late at night?
+    - Do the malls close late in the evening?
+    - when will shopping mall open?
+    - when will shopping mall open today?
+    - when will shopping malls close?
+- intent: qa/shopping_brucelee
+  examples: |
+    - Where can I buy Bruce Lee souvenir?
+    - Where can I buy Bruce Lee T-shirt?
+- intent: qa/shopping_kungfu
+  examples: |
+    - Where can I buy Kung Fu goods?
+- intent: qa/shopping_chopcarving
+  examples: |
+    - Where can I get a custom chop carving?
+- intent: qa/shopping_street
+  examples: |
+    - Any street market in Hong Kong?
+    - Any open market in Hong Kong?
+    - Any open air market in Hong Kong?
+    - Which open market you recommend?
+    - Which open air market you recommend?
+    - What time does street market open?
+    - What time does street market close?
+    - What are the business hours of street market?
+    - When do street markets open?
+    - What is the opening hours of street markets?
+    - Which street market is the best?
+    - Which street market you recommend?
+    - Hong Kong style street market
+    - where are the open air markets?
+    - best street market
+- intent: qa/shopping_nightmarket
+  examples: |
+    - Any night market in Hong Kong?
+    - Which night market you recommend?
+    - Which night market is the best?
+    - best night market in hk
+- intent: qa/shopping_bargain
+  examples: |
+    - Can I bargain when shopping in street market?
+    - Can I bargain at street market?
+- intent: qa/things_unique
+  examples: |
+    - What are the unique things to do in Hong Kong?
+    - Any unique things to do in Hong Kong?
+    - What are the special things to experience in Hong Kong?
+    - Any special things to experience in Hong Kong?
+    - things to do
+- intent: qa/things_class
+  examples: |
+    - Do you offer any classes to tourists?
+    - Does your office provide any classes to tourist?
+    - Where can I meet with local people?
+    - classes
+- intent: qa/things_movie
+  examples: |
+    - How to check what movies are on air?
+    - Any movies on air?
+    - I want to watch a movie in the cinema. Where to go?
+    - Where can I watch a movie?
+    - Any good cinema you recommend?
+    - Any cinema that playing western movie?
+    - Where is the biggest cinema?
+    - movies on air
+    - cinema
+- intent: qa/things_dance
+  examples: |
+    - Where can I watch Dragon Dance performance?
+    - Where can I watch Lion Dance performance?
+    - Dragon Dance
+    - Lion Dance
+    - Where to watch lion dance?
+- intent: qa/things_kungfu
+  examples: |
+    - Where can I watch Kung Fu performance?
+    - Kung Fu
+    - Where to learn Kung Fu?
+- intent: qa/things_cake
+  examples: |
+    - Where can I learn how to make Chinese cake?
+    - Any cake making classes?
+    - Where can I learn how to make mooncake?
+    - Where can I learn how to make dim sum?
+    - Where can I learn how to cook dim sum?
+    - Any dim sum classes?
+    - Where can I learn how to make rice dumplings?
+    - Any cooking centre in Hong Kong?
+    - Any Chinese bakery class for tourists?
+    - Any English speaking culinary classes?
+    - Any Japanese speaking cooking classes?
+    - cake
+    - Where can I join a class to learn baking?
+    - where can I join cake making classes?
+    - Any cooking school in Hong Kong?
+- intent: qa/things_taichi
+  examples: |
+    - Where can I see people practicing Tai Chi?
+    - Where can I see Tai Chi?
+    - What time usually people practicing Tai Chi?
+    - Any tai chi class?
+    - where to learn Tai Chi?
+    - Tai Chi
+- intent: qa/things_beatingpersion
+  examples: |
+    - Where can I see "petty person beating"?
+    - Where can I see beating persons?
+    - beating persons
+    - beating person
+- intent: qa/things_special
+  examples: |
+    - Is there any Tai Chi class for tourists?
+    - Is there any Kung Fu class for tourists?
+    - Is there any Wing Chun class for tourists?
+    - Is there any tea appreciation class for tourists?
+    - Is there any Fung Shui class for tourists?
+    - Is there any Feng Shui class for tourists?
+    - where can I join tea appreciation class
+- intent: qa/things_fortune
+  examples: |
+    - Where can I go for Chinese Fortune telling?
+    - Where can I go for palm reading?
+    - Where can I go for face reading?
+    - Chinese Fortune telling
+    - palm reading
+    - face reading
+- intent: qa/things_temple
+  examples: |
+    - What should I do when I visit a temple?
+    - Any rules to follow when visiting a temple?
+    - visit a temple
+    - visiting a temple
+    - visit temple
+    - visiting temple
+- intent: qa/things_church
+  examples: |
+    - Any English speaking Sunday Church?
+    - Where can I go for Sunday mass?
+    - Sunday Church
+    - Sunday mass
+- intent: qa/things_photo
+  examples: |
+    - Is there any Chinese wedding dress photo service?
+- intent: qa/things_cantonses
+  examples: |
+    - Any Cantonese speaking classes for tourists?
+    - Cantonese
+- intent: qa/things_architecture
+  examples: |
+    - How can I join an architecture walk?
+    - Where can I see the special buildings?
+    - special buildings
+    - architecture walk
+    - where can I see the best architecture in Hong Kong?
+    - any must see architecture in Hong Kong?
+- intent: qa/things_colonial
+  examples: |
+    - Where can I see the colonial buildings?
+    - colonial
+- intent: qa/things_junk
+  examples: |
+    - How can I ride on a Chinese junk?
+    - How can I ride on an authentic junk?
+    - How can I ride join a junk cruise?
+    - any chinese junk tours?
+- intent: qa/things_rickshaw
+  examples: |
+    - How can I ride on a Rickshaw?
+- intent: qa/things_dolphin
+  examples: |
+    - Where can I see pink dolphin?
+    - Any pink dolphin organized tour?
+    - are there any pink dolphin tours?
+    - pink dolphin
+    - Pink Dolphin Tour
+- intent: qa/things_victoriaharbour
+  examples: |
+    - Any speed boat tour in Victoria harbour?
+- intent: qa/things_fishingtour
+  examples: |
+    - Any fishing tour in Hong Kong?
+    - fishing
+- intent: qa/things_tvb
+  examples: |
+    - How can I be a live audience in a TVB show?
+    - tvb
+- intent: ask
+  examples: |
+    - great
+    - good
+    - find
+- intent: kg
+  examples: |
+    - What is the opening hours of Ocean Park?
+    - When it opens?
+    - What time it opens?
+    - Open hours?
+    - What time does it close?
+    - Does it open at night?
+    - From what time to what time?
+    - Open from when?
+    - Open until when?
+    - Where can I get the discount tickets of Ocean Park?
+    - Any special property in Ocean Park?
+    - Is it open during inclement weather?
+    - Is it open under typhoon?
+    - Is it open during typhoon signal 3?
+    - Is it open during typhoon signal 8?
+    - Is it open during red rainstorm?
+    - Is it open during black rainstorm?
+    - I want to visit Wong Tai Sin temple
+    - I want to visit Hong Kong Disneyland
+    - I want to visit Temple Street
+    - I want to visit The Peak
+    - what is the opening hours of temple street night market
+    - Airbnb
+    - Yuen Po Street Bird Garden
+    - YHA Sze Lock Yuen Tai Mo Shan Youth Hostel
+    - YHA Pak Sha O Youth Hostel
+    - YHA Ngong Ping SG Davis Youth Hostel
+    - YHA Mei Ho House Youth Hostel
+    - YHA Jockey Club Mt. Davis Youth Hostel
+    - YHA Bradbury Jockey Club Tai Mei Tuk Youth Hostel
+    - YHA Bradbury Hall Chek Keng Youth Hostel
+    - Y-Loft
+    - Wong Tai Sin Temple
+    - wong tai sin temple
+    - wing chun’ kung fu experience tour
+    - Where Modern Classics Meet Historical Charm (Wan Chai, Hong Kong Island)
+    - Western Market
+    - website
+    - Wan Chai Gap Road
+    - walking map
+    - visit/transit visa
+    - visa/entry requirements for macau
+    - visa office at lo wu
+    - visa office at huanggang
+    - Victoria Harbour
+    - vA! - Hong Kong Visual Arts Centre
+    - V city
+    - Unique Hong Kong experiences
+    - ua cinemas
+    - Tung Ping Chau (Ping Chau Country Trail)
+    - Tung Chung to Tai O
+    - Tsing Shan Monastery
+    - Tsim Sha Tsui Promenade
+    - Travel Through Time (Central & Sheung Wan, Hong Kong Island)
+    - Touring Victoria Harbour
+    - tour details and booking
+    - Tin Hau Temple at Lam Tsuen
+    - ticketing
+    - The Salisbury - YMCA of Hong Kong
+    - The Peak to Pok Fu Lam Reservoir Road (Hong Kong Trail Section 1)
+    - The Peak to Lung Fu Shan Country Park
+    - The Peak
+    - The Hong Kong Racing Museum
+    - The FOREST
+    - The Avenue of Stars
+    - Testing ABC Attraction
+    - Temple Street Night Market
+    - temple street night market
+    - tea appreciation
+    - Tap Mun
+    - Tailor-made Qipaos or Cheongsams
+    - Tai Yuen Street (Toys Street)
+    - Tai Tam Country Park to Quarry Bay
+    - Tai O Stilt House
+    - Tai O Heritage Hotel (former Tai O Police Station)
+    - Tai Mo Shan to Shing Mun Reservoir
+    - Tai Mo Shan
+    - Tai Chi
+    - Sunset Peak (Lantau Trail Section 1 & 2)
+    - Summer sales or winter sales periods
+    - Statue of Bruce Lee
+    - Star Ferry
+    - Stanley Market
+    - Stanley Gap Road to Wong Nai Chung Reservoir (Wilson Trail Section 1)
+    - Stanley
+    - Stanford Hillview Hotel Hong Kong
+    - special offers
+    - Special interests tours
+    - Souvenirs sold by the Hong Kong Tourism Board
+    - souvenir ideas
+    - Sneakers Street
+    - smart departure
+    - sky100 Hong Kong Observation Deck
+    - Sky Terrace 428
+    - Sincere (Tsuen Wan)
+    - Sincere (Sham Shui Po)
+    - Sincere (Mong Kok)
+    - Sincere (Central)
+    - Shing Mun Country Park
+    - Sheung Yiu Folk Museum
+    - Sheraton Hong Kong Hotel & Towers
+    - Sharp Island
+    - Shanghai Street (Kitchenware)
+    - Shama Central
+    - Sha Tin Pass Road to Kowloon Reservoir (Lion Rock)
+    - service hours
+    - Sam Tung Uk Museum
+    - Sales tax in Hong Kong
+    - Sai Kung Peninsula Hike
+    - routes information
+    - route map and fares
+    - route
+    - Rickshaw
+    - Renaissance Harbour View Hotel Hong Kong
+    - remarks
+    - Reliable shops
+    - Reliable second-hand stores
+    - Regal Riverside Hotel
+    - Regal Oriental Hotel
+    - Regal Kowloon Hotel
+    - Regal Hong Kong Hotel
+    - Regal Airport Hotel
+    - qts-accredited money changers
+    - programme schedule
+    - program schedule
+    - Postcard
+    - Police Museum
+    - Po Toi Island
+    - Po Lin Monastery / The Big Buddha
+    - Ping Shan Heritage Trail (Yuen Long, New Territories)
+    - Ping Shan Heritage Trail
+    - ping shan heritage trail
+    - pick-up time
+    - pick-up  drop-off point
+    - Photography Studios for Kimono, Hanbok, Chinese wedding dresses
+    - phone
+    - Petty Person Beating
+    - performance time
+    - Peng Chau Peng Yu Path
+    - Peak Tram
+    - Peak Tower
+    - Peak Circle Walk
+    - pay-in/corporate lounges
+    - passport validity
+    - passport
+    - Paradise Mall
+    - other visa agents
+    - opening hours
+    - Old Town Central (Cental & Sheung Wan, Hong Kong Island)
+    - Old Town Central
+    - Ocean Terminal Deck
+    - Ocean Park Hong Kong
+    - Ocean Park
+    - Novotel Citygate Hong Kong
+    - Notification Slip for Pre-arrival Registration for Indian Nationals
+    - Noah's Ark Hong Kong
+    - Noah's Ark Hotel & Resort
+    - Ngong Ping Village
+    - Ngong Ping 360
+    - New Town Plaza
+    - Nam Sang Wai
+    - Museum of Coastal Defence
+    - mtr tourist tickets
+    - more special interests adventures
+    - Monopoly Dreams
+    - mobile app
+    - MegaBox
+    - Meet the Pals
+    - mcl cinemas
+    - Marks & Spencer
+    - Markets for Leisure and Pleasure (Mong Kok & Yau Ma Tei, Kowloon)
+    - Maritime Square
+    - map
+    - Man Mo Temple
+    - Major Cinemas in Hong Kong
+    - Madame Tussauds Hong Kong
+    - Maclehose Trail Stages 1 & 2
+    - macao government tourism office
+    - Lung Yeuk Tau Heritage Trail (Fanling, New Territories)
+    - Ling Kok Shan Hiking Trail
+    - Li Yuen Street East and West
+    - Lei Cheng Uk Han Tomb Museum
+    - Lee Theatre and Leighton
+    - Law Uk Folk Museum
+    - Lau Shui Heung to Fung Yuen
+    - Lantau Peak
+    - Lantau Island & Monastery Tour
+    - Lantau Island
+    - Lanson Place Hotel
+    - Langham Place
+    - Landing visa for Shenzhen Special Economic Zone
+    - Landing or On-arrival visa for Hong Kong
+    - Lan Kwai Fong
+    - Lamma Island
+    - Ladies' Market
+    - Kwun Tong Factory Outlets
+    - Kwai Chung Plaza
+    - Kungfu or martial arts-related souvenir
+    - Kung Fu Corner
+    - K11 Musea
+    - K11 Art Mall
+    - Jardine's Crescent
+    - Jao Tsung-I Academy
+    - Jade Market and Jade Street
+    - Island Beverley Centre
+    - ifc mall
+    - Hysan Place
+    - Hyatt Regency Hong Kong, Sha Tin
+    - Hung Shing Temple at Wan Chai
+    - Hung Shing Temple at Sai Kung
+    - Hotel Benito
+    - Horizon Plaza
+    - hong kong’s official public holidays
+    - Hong Kong Wetland Park and Tsim Bei Tsui
+    - Hong Kong Wetland Park & Ha Pak Nai
+    - hong kong traditional lifestyle tour (tai chi lesson included)
+    - Hong Kong Space Museum
+    - Space Museum
+    - Hong Kong souvenirs
+    - Hong Kong SkyCity Marriott Hotel
+    - SkyCity Marriott Hotel
+    - Hong Kong Science Museum
+    - Science Museum
+    - Hong Kong Railway Museum
+    - Railway Museum
+    - Hong Kong Observation Wheel
+    - Observation Wheel
+    - Hong Kong News-Expo
+    - News-Expo
+    - Hong Kong Museum of Medical Sciences
+    - Museum of Medical Sciences
+    - Hong Kong Museum of History
+    - Museum of History
+    - Hong Kong Museum of Art
+    - Museum of Art
+    - Hong Kong Maritime Museum
+    - Maritime Museum
+    - Hong Kong Island Orientation Tour
+    - Island Orientation Tour
+    - Hong Kong Heritage Museum
+    - Heritage Museum
+    - Hong Kong Heritage Discovery Centre
+    - Heritage Discovery Centre
+    - Hong Kong Film Archive
+    - Film Archive
+    - Hong Kong Disneyland
+    - Disneyland
+    - Hong Kong Disneyland Hotel
+    - Disneyland Hotel
+    - Hong Kong Correctional Services Museum
+    - Correctional Services Museum
+    - Hong Kong Arts Centre
+    - Arts Centre
+    - High Junk Peak Country Trail
+    - Heritage of Mei Ho House
+    - Harbour Plaza Resort City
+    - Harbour Plaza North Point
+    - Harbour Plaza Metropolis Kowloon Hong Kong
+    - Harbour Plaza 8 Degrees Hotel
+    - Harbour City
+    - Granville Road
+    - Grand Hyatt Hong Kong
+    - Goldfish Market
+    - golden harvest
+    - Golden Bauhinia Square
+    - getting there
+    - Former residence of Bruce Lee
+    - Flower Market
+    - Florentia Village Outlet
+    - Flagstaff House Museum of Tea Ware
+    - Fishing tour
+    - Fireboat Alexander Grantham Exhibition Gallery
+    - Festival Walk
+    - ferry service
+    - ferry
+    - ferries
+    - feng shui tour
+    - Fashion Walk
+    - faq
+    - Extension of stay
+    - enquiries
+    - emperor cinemas
+    - E-Max WearHouse
+    - duration
+    - DukLing Harbour Cruise
+    - Dried Seafood Street and Tonic Food Street
+    - Dragon's Back (Hong Kong Trail Section 8)
+    - Dr Sun Yat-sen Museum
+    - Dr Sun Yat Sen Historical Trail (Central & Western, Hong Kong Island)
+    - Double Haven Country Trail
+    - Dorsett Wanchai Hong Kong
+    - Dolphin watching tour
+    - Disney's Hollywood Hotel
+    - Dialogue in the Dark
+    - description
+    - Deals and offers for visitors
+    - Cycling in Nam Sang Wai
+    - Cycling from Sha Tin to Wu Kai Sha
+    - Cycling from Sha Tin to Tai Mei Tuk
+    - Custom chop carving
+    - Culinary classes for visitors
+    - cross border coaches
+    - Cosmo Hotel Hong Kong
+    - Cordis Hong Kong
+    - Clock Tower
+    - Cityplaza
+    - Citygate Outlets
+    - City Gallery
+    - Church service
+    - Chun Yeung Street Wet Market
+    - christian churches
+    - China Hong Kong City
+    - Che Kung Temple at Sha Tin
+    - catholic churches
+    - Cat Street (Antiques Street)
+    - Cat Street
+    - Antiques Street
+    - Casa Hotel
+    - bus service
+    - bus
+    - Bruce Lee souvenir
+    - broadway circuit
+    - booking
+    - Big Bus Tours
+    - barrier-free facilities
+    - average cycling time
+    - Aqua Luna
+    - apm
+    - Apliu Street Flea Market
+    - Ani-Com Park@Harbour FUN
+    - airport express
+    - airline lounges
+    - address
+    - about qts scheme
+    - A Symphony of Lights
+    - A Popular Temple and a City Transformed (Wong Tai Sin & Kowloon City, Kowloon)
+    - A Century of Architecture (Central & Admiralty, Hong Kong Island)
+    - A Century of Architecture
+    - 60 West
+- synonym: supermarket
+  examples: |
+    - buy fresh food
+    - buy fresh fruits
+    - buy food
+    - buy fruits
+    - grocery
+    - grocery store
+- synonym: opening hours
+  examples: |
+    - opens
+    - Open hours
+    - open
+    - what time to what time
+    - close
+- synonym: how to get there
+  examples: |
+    - How to go to
+    - Getting there
+    - How to go
+    - transport
+    - bus
+    - train
+    - MTR
+- synonym: ticketing
+  examples: |
+    - tickets
+- synonym: weather
+  examples: |
+    - typhoon
+    - rainstorm
