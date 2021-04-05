@@ -1,0 +1,326 @@
+version: '2.0'
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- greet
+- callname
+- bye
+- thank
+- refuse
+- stop
+- chitchat
+- qa
+- out_of_scope
+- kg
+- menu
+- route
+- inform_location
+- transit
+- travel_macau
+- inform_duration
+- inform_departure
+- gettingthere
+- accommodation_flow
+- events_flow
+- immigration_flow
+- sightseeing_flow
+- sightseeinglocation_flow
+- transport_flow
+- googlemap
+- museum_flow
+- hiking_flow
+- shoppingmall_flow
+- departmentstore_flow
+- citywalks_flow
+- mainmenu
+entities:
+- location
+- location_from
+- location_to
+- departure_airport
+- departure_downtown
+- city
+- facility
+- pharmacy
+- duration
+- sightseeing
+- hiking_duration
+- mtr
+- ask
+slots:
+  entity:
+    type: unfeaturized
+    influence_conversation: false
+  location_from:
+    type: unfeaturized
+    auto_fill: false
+    influence_conversation: false
+  location_to:
+    type: unfeaturized
+    auto_fill: false
+    influence_conversation: false
+  requested_slot:
+    type: unfeaturized
+    influence_conversation: false
+  duration:
+    type: unfeaturized
+    auto_fill: false
+    influence_conversation: false
+  shoppingmall_distict:
+    type: unfeaturized
+    auto_fill: false
+    influence_conversation: false
+  departmentstore_distict:
+    type: unfeaturized
+    auto_fill: false
+    influence_conversation: false
+  sightseeing:
+    type: unfeaturized
+    auto_fill: false
+    influence_conversation: false
+  sightseeing_district:
+    type: unfeaturized
+    auto_fill: false
+    influence_conversation: false
+  hiking_duration:
+    type: unfeaturized
+    auto_fill: false
+    influence_conversation: false
+  hiking_district:
+    type: unfeaturized
+    auto_fill: false
+    influence_conversation: false
+  museum_district:
+    type: unfeaturized
+    auto_fill: false
+    influence_conversation: false
+responses:
+  utter_kg:
+  - text: intent_kg
+  utter_menu:
+  - text: intent_menu
+  utter_out_of_scope:
+  - text: intent_out_of_scope
+  utter_route:
+  - text: intent_route
+  utter_dining:
+  - text: intent_dining
+  utter_googlemap:
+  - text: intent_googlemap
+  utter_greet:
+  - text: Hey! How are you?
+  utter_callname:
+  - text: I'm here
+  utter_bye:
+  - text: Bye
+  utter_noworries:
+  - text: You are welcome. Enjoy your stay!
+  utter_refuse:
+  - text: Thank you. Feel free to chat with us again if you need help on sightseeing Hong Kong. Goodbye!
+  utter_travel_macau:
+  - text: Where will you depart from?
+    buttons:
+    - title: Airport
+      payload: departure from airport
+    - title: Downtown
+      payload: departure from downtown
+  utter_departure_airport:
+  - text: qa_transit_macau_airport
+  utter_departure_downtown:
+  - text: qa_transit_macau_downtown
+  utter_accommodation_flow:
+  - text: What type of accommodation are you looking for? Alternatively, please input the full name of the hotel.
+    buttons:
+    - title: Licensed hotels
+      payload: https://www.discoverhongkong.com/eng/plan/accommodation/results.html?q=&type=hotels-and-resorts
+    - title: Accommodation accredited by the Quality Tourism Services Scheme
+      payload: https://www.discoverhongkong.com/eng/plan/accommodation/results.html?q=&type=licensed-guesthouses
+    - title: Youth hostels
+      payload: https://www.yha.org.hk/en/
+  utter_events_flow:
+  - text: Please click the following buttons for information on the latest happenings in Hong Kong.<br/><br/>Alternatively, please input the name of event, or let us know the period of events which you are looking for.
+    buttons:
+    - title: Highlight events
+      payload: https://www.discoverhongkong.com/eng/what-s-new/events.html
+    - title: Cultural events
+      payload: https://www.lcsd.gov.hk/clpss/en/search/culture/GeneralSearchForm.do?searchType=date
+    - title: Trade fairs
+      payload: https://mehongkong.com/eng/past-upcoming-events.html?page=2&lang=eng
+  utter_events_duration:
+  - text: flow_events
+  utter_immigration_flow:
+  - text: Please refer to the following information, or contact the Hong Kong Immigration Department.
+    buttons:
+    - title: Entry requirements of Hong Kong
+      payload: info:Immigration guidelines for entry to Hong Kong for foreign nationals
+    - title: Extension of stay
+      payload: info:Extension of stay
+    - title: Loss of passport or travel document
+      payload: info:Loss passport or travel document
+    - title: Hong Kong Immigration Department
+      payload: https://www.immd.gov.hk/eng/contactus/index.html
+  utter_sightseeing_flow:
+  - text: Please input 'attractions' to get a list of recommendations. You may also input name of the attraction for relevant details.
+  utter_transport_flow:
+  - text: What kind of information do you need?​
+    buttons:
+    - title: Getting around Hong Kong
+      payload: info:Getting around in Hong Kong
+    - title: Transport to China
+      payload: info:Transport to China
+    - title: Transport to Macau
+      payload: info:Transport to Macau
+    - title: Guide to Public Transport for People with Disabilities
+      payload: https://www.td.gov.hk/filemanager/en/content_4963/guidebook_2019.5.9_ch2.pdf
+  utter_ask_location_from:
+  - text: Where will you depart from? For example, the Star Ferry Pier in Tsim Sha Tsui?<br/>Or click the button below to indicate your current location.<gps>
+  utter_ask_location_to:
+  - text: Where will you depart to? For example, The Peak.
+  utter_ask_duration:
+  - text: May I confirm how long you will be in Hong Kong? For example, today from 10am to 6pm. 
+  utter_wrong_duration:
+  - text: The input is not a valid duration,Please try again. For example, from today 10am to 6pm.
+  utter_wrong_location:
+  - text: The input is not a valid location, Please try again. For example, Star Ferry Pier, Tsim Sha Tsui.
+  utter_ask_shoppingmall_distict:
+  - text: Which area you want to visit?<br/><br/>Or input the areas where you want to visit.
+    buttons:
+    - title: Explore nearby
+      payload: gps
+    - title: Hong Kong Island
+      payload: Hong Kong Island
+    - title: Kowloon
+      payload: Kowloon
+    - title: New Territories
+      payload: New Territories
+    - title: Outlying islands
+      payload: Outlying Islands
+  utter_ask_departmentstore_distict:
+  - text: Which area you want to visit?
+    buttons:
+    - title: Explore nearby
+      payload: gps
+    - title: Hong Kong Island
+      payload: Hong Kong Island
+    - title: Kowloon
+      payload: Kowloon
+    - title: New Territories
+      payload: New Territories
+  utter_ask_sightseeing:
+  - text: Which of the following interest you? I can give you information and recommendations about each one. 
+    buttons:
+    - title: Key attractions
+      payload: Key Attractions
+    - title: Great outdoors
+      payload: Great Outdoors
+    - title: Local culture
+      payload: Local Culture
+    - title: Arts
+      payload: Arts
+    - title: Museums
+      payload: Museums
+    - title: Heritage & History
+      payload: Heritage & History
+    - title: Thematic itineraries
+      payload: Thematic Itineraries
+  utter_ask_sightseeing_district:
+  - text: Would you like to explore places near you or in other areas?<br/><br/>Or input the areas where you want to explore.
+    buttons:
+    - title: Explore nearby
+      payload: gps
+    - title: Hong Kong Island
+      payload: Hong Kong Island
+    - title: Kowloon
+      payload: Kowloon
+    - title: New Territories
+      payload: New Territories
+    - title: Outlying islands
+      payload: Outlying Islands
+  utter_ask_hiking_duration:
+  - text: 'First, tell me a bit about your hiking preferences.<br/>How long would you like to hike? '
+    buttons:
+    - title: Within 2 hours
+      payload: Within 2 hours
+    - title: 2 to 4 hours
+      payload: 2-4
+    - title: 4 to 6 hours
+      payload: 4-6
+    - title: More than 6 hours
+      payload: More than 6 hours
+  utter_ask_hiking_district:
+  - text: Great! And where in Hong Kong would you like to go hiking?
+    buttons:
+    - title: Hong Kong Island
+      payload: Hong Kong Island
+    - title: Kowloon
+      payload: Kowloon
+    - title: New Territories
+      payload: New Territories
+    - title: New Territories - Sai Kung
+      payload: Sai Kung
+    - title: Outlying islands
+      payload: Outlying Islands
+  utter_ask_museum_district:
+  - text: Which areas of the museums would you like to explore?
+    buttons:
+    - title: Hong Kong Island
+      payload: Hong Kong Island
+    - title: Kowloon
+      payload: Kowloon
+    - title: New Territories
+      payload: New Territories
+  utter_ask_citywalks_district:
+  - text: Would you like to explore walks near you or in other areas?
+    buttons:
+    - title: Explore nearby
+      payload: gps
+    - title: Hong Kong Island
+      payload: Hong Kong Island
+    - title: Kowloon
+      payload: Kowloon
+    - title: New Territories
+      payload: New Territories
+  utter_mainmenu:
+  - text: main menu
+  utter_iamabot:
+  - text: i am bot
+  utter_goodbye:
+  - text: Godbye, see you soon..
+  utter_get_greet:
+  - text: how can i help you?   
+    buttons:
+    - title: click 
+      payload: wwww.googe.com
+actions:
+- action_greet
+- utter_qa
+- action_route
+- action_event
+- action_transit
+- action_sightseeinglocation
+- action_museum
+- action_gettingthere
+- action_citywalks
+- action_hiking
+- action_sightseeing
+- action_shoppingmall
+- action_departmentstore
+- location_form
+- transit_form
+- sightseeing_form
+- museum_form
+- hiking_form
+- transport_form
+- shoppingmall_form
+- departmentstore_form
+- get_greet
+forms:
+  location_form: {}
+  transit_form: {}
+  sightseeing_form: {}
+  museum_form: {}
+  hiking_form: {}
+  transport_form: {}
+  shoppingmall_form: {}
+  departmentstore_form: {}
