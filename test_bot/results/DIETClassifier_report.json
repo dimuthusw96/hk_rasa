@@ -1,0 +1,118 @@
+{
+  "location_from": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 3,
+    "confused_with": {}
+  },
+  "city": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 4,
+    "confused_with": {}
+  },
+  "departure_downtown": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 1,
+    "confused_with": {}
+  },
+  "cuisine": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 75,
+    "confused_with": {}
+  },
+  "pharmacy": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 53,
+    "confused_with": {}
+  },
+  "dish": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 100,
+    "confused_with": {}
+  },
+  "hiking_duration": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 15,
+    "confused_with": {}
+  },
+  "departure_airport": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 1,
+    "confused_with": {}
+  },
+  "facility": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 32,
+    "confused_with": {}
+  },
+  "location_to": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 1,
+    "confused_with": {}
+  },
+  "restaurant": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 3,
+    "confused_with": {}
+  },
+  "duration": {
+    "precision": 1.0,
+    "recall": 0.8598382749326146,
+    "f1-score": 0.9246376811594202,
+    "support": 2597,
+    "confused_with": {}
+  },
+  "sightseeing": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 2,
+    "confused_with": {}
+  },
+  "location": {
+    "precision": 0.9752475247524752,
+    "recall": 1.0,
+    "f1-score": 0.9874686716791979,
+    "support": 197,
+    "confused_with": {}
+  },
+  "micro avg": {
+    "precision": 0.998165137614679,
+    "recall": 0.8819714656290532,
+    "f1-score": 0.9364778791530384,
+    "support": 3084
+  },
+  "macro avg": {
+    "precision": 0.9982319660537483,
+    "recall": 0.9899884482094725,
+    "f1-score": 0.9937218823456156,
+    "support": 3084
+  },
+  "weighted avg": {
+    "precision": 0.9984188593956672,
+    "recall": 0.8819714656290532,
+    "f1-score": 0.9357378035965683,
+    "support": 3084
+  }
+}

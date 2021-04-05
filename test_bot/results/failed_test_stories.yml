@@ -1,0 +1,57 @@
+version: "2.0"
+stories:
+- story: happy path 1 (/tmp/tmpj8l5qzw_/1a2ba812c58349be824736178393fe53_test_stories.yml)
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great  # predicted: greet: amazing
+  - action: utter_happy  # predicted: utter_transport_flow
+  - action: action_listen  # predicted: action_default_fallback
+- story: happy path 2 (/tmp/tmpj8l5qzw_/1a2ba812c58349be824736178393fe53_test_stories.yml)
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great  # predicted: greet: amazing
+  - action: utter_happy  # predicted: utter_transport_flow
+  - action: action_listen  # predicted: action_default_fallback
+  - intent: goodbye  # predicted: bye: bye-bye!
+  - action: utter_goodbye
+- story: sad path 1 (/tmp/tmpj8l5qzw_/1a2ba812c58349be824736178393fe53_test_stories.yml)
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy  # predicted: nlu_fallback: not good
+  - action: utter_cheer_up  # predicted: utter_transport_flow
+  - action: utter_did_that_help  # predicted: action_default_fallback
+  - action: action_listen  # predicted: action_default_fallback
+  - intent: affirm  # predicted: nlu_fallback: yes
+  - action: utter_happy  # predicted: utter_transport_flow
+  - action: action_listen  # predicted: action_default_fallback
+- story: sad path 2 (/tmp/tmpj8l5qzw_/1a2ba812c58349be824736178393fe53_test_stories.yml)
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy  # predicted: nlu_fallback: not good
+  - action: utter_cheer_up  # predicted: utter_transport_flow
+  - action: utter_did_that_help  # predicted: action_default_fallback
+  - action: action_listen  # predicted: action_default_fallback
+  - intent: deny  # predicted: nlu_fallback: not really
+  - action: utter_goodbye  # predicted: utter_transport_flow
+- story: sad path 3 (/tmp/tmpj8l5qzw_/1a2ba812c58349be824736178393fe53_test_stories.yml)
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy  # predicted: greet: very terrible
+  - action: utter_cheer_up  # predicted: utter_transport_flow
+  - action: utter_did_that_help  # predicted: action_default_fallback
+  - action: action_listen  # predicted: action_default_fallback
+  - intent: deny  # predicted: refuse: no
+  - action: utter_goodbye  # predicted: utter_transport_flow
+- story: say goodbye (/tmp/tmpj8l5qzw_/1a2ba812c58349be824736178393fe53_test_stories.yml)
+  steps:
+  - intent: goodbye  # predicted: bye: bye-bye!
+  - action: utter_goodbye
+- story: bot challenge (/tmp/tmpj8l5qzw_/1a2ba812c58349be824736178393fe53_test_stories.yml)
+  steps:
+  - intent: bot_challenge  # predicted: greet: are you a bot?
+  - action: utter_iamabot

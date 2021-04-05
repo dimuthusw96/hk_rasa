@@ -1,0 +1,668 @@
+[
+  {
+    "text": "From today 10 a.m. til 6 p.m.",
+    "entities": [
+      {
+        "start": 0,
+        "end": 29,
+        "value": "From today 10 a.m. til 6 p.m.",
+        "entity": "duration"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "From today 10 a.m. till 6 p.m.",
+    "entities": [
+      {
+        "start": 0,
+        "end": 30,
+        "value": "From today 10 a.m. till 6 p.m.",
+        "entity": "duration"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "From today 10 a.m. to 6 p.m.",
+    "entities": [
+      {
+        "start": 0,
+        "end": 28,
+        "value": "From today 10 a.m. to 6 p.m.",
+        "entity": "duration"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "From today 10 a.m. until 6 p.m.",
+    "entities": [
+      {
+        "start": 0,
+        "end": 31,
+        "value": "From today 10 a.m. until 6 p.m.",
+        "entity": "duration"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "From today 10 a.m.-6 p.m.",
+    "entities": [
+      {
+        "start": 0,
+        "end": 25,
+        "value": "From today 10 a.m.-6 p.m.",
+        "entity": "duration"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "From today 10:00 a.m. til 6:00 p.m.",
+    "entities": [
+      {
+        "start": 0,
+        "end": 35,
+        "value": "From today 10:00 a.m. til 6:00 p.m.",
+        "entity": "duration"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "From today 10:00 a.m. till 6:00 p.m.",
+    "entities": [
+      {
+        "start": 0,
+        "end": 36,
+        "value": "From today 10:00 a.m. till 6:00 p.m.",
+        "entity": "duration"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "From today 10:00 a.m. to 6:00 p.m.",
+    "entities": [
+      {
+        "start": 0,
+        "end": 34,
+        "value": "From today 10:00 a.m. to 6:00 p.m.",
+        "entity": "duration"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "From today 10:00 a.m. until 6:00 p.m.",
+    "entities": [
+      {
+        "start": 0,
+        "end": 37,
+        "value": "From today 10:00 a.m. until 6:00 p.m.",
+        "entity": "duration"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "From today 10:00 a.m.-6:00 p.m.",
+    "entities": [
+      {
+        "start": 0,
+        "end": 31,
+        "value": "From today 10:00 a.m.-6:00 p.m.",
+        "entity": "duration"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "April 1, 10 a.m. til 6 p.m.",
+    "entities": [
+      {
+        "start": 0,
+        "end": 27,
+        "value": "April 1, 10 a.m. til 6 p.m.",
+        "entity": "duration"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "April 1, 10 a.m. till 6 p.m.",
+    "entities": [
+      {
+        "start": 0,
+        "end": 28,
+        "value": "April 1, 10 a.m. till 6 p.m.",
+        "entity": "duration"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "April 1, 10 a.m. to 6 p.m.",
+    "entities": [
+      {
+        "start": 0,
+        "end": 26,
+        "value": "April 1, 10 a.m. to 6 p.m.",
+        "entity": "duration"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "April 1, 10 a.m. until 6 p.m.",
+    "entities": [
+      {
+        "start": 0,
+        "end": 29,
+        "value": "April 1, 10 a.m. until 6 p.m.",
+        "entity": "duration"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "April 1, 10 a.m.-6 p.m.",
+    "entities": [
+      {
+        "start": 0,
+        "end": 23,
+        "value": "April 1, 10 a.m.-6 p.m.",
+        "entity": "duration"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "April 1, 10:00 a.m. til 6:00 p.m.",
+    "entities": [
+      {
+        "start": 0,
+        "end": 33,
+        "value": "April 1, 10:00 a.m. til 6:00 p.m.",
+        "entity": "duration"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "April 1, 10:00 a.m. till 6:00 p.m.",
+    "entities": [
+      {
+        "start": 0,
+        "end": 34,
+        "value": "April 1, 10:00 a.m. till 6:00 p.m.",
+        "entity": "duration"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "April 1, 10:00 a.m. to 6:00 p.m.",
+    "entities": [
+      {
+        "start": 0,
+        "end": 32,
+        "value": "April 1, 10:00 a.m. to 6:00 p.m.",
+        "entity": "duration"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "April 1, 10:00 a.m. until 6:00 p.m.",
+    "entities": [
+      {
+        "start": 0,
+        "end": 35,
+        "value": "April 1, 10:00 a.m. until 6:00 p.m.",
+        "entity": "duration"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "April 1, 10:00 a.m.-6:00 p.m.",
+    "entities": [
+      {
+        "start": 0,
+        "end": 29,
+        "value": "April 1, 10:00 a.m.-6:00 p.m.",
+        "entity": "duration"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "Now to 6 p.m.",
+    "entities": [
+      {
+        "start": 0,
+        "end": 13,
+        "value": "Now to 6 p.m.",
+        "entity": "duration"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "Now-6 p.m.",
+    "entities": [
+      {
+        "start": 0,
+        "end": 10,
+        "value": "Now-6 p.m.",
+        "entity": "duration"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "Now until 6 p.m.",
+    "entities": [
+      {
+        "start": 0,
+        "end": 16,
+        "value": "Now until 6 p.m.",
+        "entity": "duration"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "Now til 6 p.m.",
+    "entities": [
+      {
+        "start": 0,
+        "end": 14,
+        "value": "Now til 6 p.m.",
+        "entity": "duration"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "Now till 6 p.m.",
+    "entities": [
+      {
+        "start": 0,
+        "end": 15,
+        "value": "Now till 6 p.m.",
+        "entity": "duration"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "Now to 6:00 p.m.",
+    "entities": [
+      {
+        "start": 0,
+        "end": 16,
+        "value": "Now to 6:00 p.m.",
+        "entity": "duration"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "Now-6:00 p.m.",
+    "entities": [
+      {
+        "start": 0,
+        "end": 13,
+        "value": "Now-6:00 p.m.",
+        "entity": "duration"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "Now until 6:00 p.m.",
+    "entities": [
+      {
+        "start": 0,
+        "end": 19,
+        "value": "Now until 6:00 p.m.",
+        "entity": "duration"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "Now til 6:00 p.m.",
+    "entities": [
+      {
+        "start": 0,
+        "end": 17,
+        "value": "Now til 6:00 p.m.",
+        "entity": "duration"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "Now till 6:00 p.m.",
+    "entities": [
+      {
+        "start": 0,
+        "end": 18,
+        "value": "Now till 6:00 p.m.",
+        "entity": "duration"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "10 o'clock today to 6 o'clock tomorrow ",
+    "entities": [
+      {
+        "start": 0,
+        "end": 39,
+        "value": "10 o'clock today to 6 o'clock tomorrow ",
+        "entity": "duration"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "From today 10 a.m. till tomorrow 6 p.m.",
+    "entities": [
+      {
+        "start": 0,
+        "end": 39,
+        "value": "From today 10 a.m. till tomorrow 6 p.m.",
+        "entity": "duration"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "From today 10 a.m. to tomorrow 6 p.m.",
+    "entities": [
+      {
+        "start": 0,
+        "end": 37,
+        "value": "From today 10 a.m. to tomorrow 6 p.m.",
+        "entity": "duration"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "From today 10 a.m.- tomorrow 6 p.m.",
+    "entities": [
+      {
+        "start": 0,
+        "end": 35,
+        "value": "From today 10 a.m.- tomorrow 6 p.m.",
+        "entity": "duration"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "From today 10 a.m. until tomorrow 6 p.m.",
+    "entities": [
+      {
+        "start": 0,
+        "end": 40,
+        "value": "From today 10 a.m. until tomorrow 6 p.m.",
+        "entity": "duration"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "From today 10 o'clock-6 o'clock tomorrow ",
+    "entities": [
+      {
+        "start": 0,
+        "end": 41,
+        "value": "From today 10 o'clock-6 o'clock tomorrow ",
+        "entity": "duration"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "From today 10:00 a.m. til tomorrow 6:00 p.m.",
+    "entities": [
+      {
+        "start": 0,
+        "end": 44,
+        "value": "From today 10:00 a.m. til tomorrow 6:00 p.m.",
+        "entity": "duration"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "From today 10:00 a.m. till tomorrow 6:00 p.m.",
+    "entities": [
+      {
+        "start": 0,
+        "end": 45,
+        "value": "From today 10:00 a.m. till tomorrow 6:00 p.m.",
+        "entity": "duration"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "From today 10:00 a.m. to tomorrow 6:00 p.m.",
+    "entities": [
+      {
+        "start": 0,
+        "end": 43,
+        "value": "From today 10:00 a.m. to tomorrow 6:00 p.m.",
+        "entity": "duration"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "From today 10:00 a.m.- tomorrow 6:00 p.m.",
+    "entities": [
+      {
+        "start": 0,
+        "end": 41,
+        "value": "From today 10:00 a.m.- tomorrow 6:00 p.m.",
+        "entity": "duration"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "From today 10:00 a.m. until tomorrow 6:00 p.m.",
+    "entities": [
+      {
+        "start": 0,
+        "end": 46,
+        "value": "From today 10:00 a.m. until tomorrow 6:00 p.m.",
+        "entity": "duration"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "10 o'clock Apr 1 to 6 o'clock Apr 2 ",
+    "entities": [
+      {
+        "start": 0,
+        "end": 36,
+        "value": "10 o'clock Apr 1 to 6 o'clock Apr 2 ",
+        "entity": "duration"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "From Apr 1 10 a.m. till Apr 2 6 p.m.",
+    "entities": [
+      {
+        "start": 0,
+        "end": 36,
+        "value": "From Apr 1 10 a.m. till Apr 2 6 p.m.",
+        "entity": "duration"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "From Apr 1 10 a.m. to Apr 2 6 p.m.",
+    "entities": [
+      {
+        "start": 0,
+        "end": 34,
+        "value": "From Apr 1 10 a.m. to Apr 2 6 p.m.",
+        "entity": "duration"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "From Apr 1 10 a.m.- Apr 2 6 p.m.",
+    "entities": [
+      {
+        "start": 0,
+        "end": 32,
+        "value": "From Apr 1 10 a.m.- Apr 2 6 p.m.",
+        "entity": "duration"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "From Apr 1 10 a.m. until Apr 2 6 p.m.",
+    "entities": [
+      {
+        "start": 0,
+        "end": 37,
+        "value": "From Apr 1 10 a.m. until Apr 2 6 p.m.",
+        "entity": "duration"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "From Apr 1 10 o'clock-6 o'clock Apr 2 ",
+    "entities": [
+      {
+        "start": 0,
+        "end": 38,
+        "value": "From Apr 1 10 o'clock-6 o'clock Apr 2 ",
+        "entity": "duration"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "From Apr 1 10:00 a.m. til Apr 2 6:00 p.m.",
+    "entities": [
+      {
+        "start": 0,
+        "end": 41,
+        "value": "From Apr 1 10:00 a.m. til Apr 2 6:00 p.m.",
+        "entity": "duration"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "From Apr 1 10:00 a.m. till Apr 2 6:00 p.m.",
+    "entities": [
+      {
+        "start": 0,
+        "end": 42,
+        "value": "From Apr 1 10:00 a.m. till Apr 2 6:00 p.m.",
+        "entity": "duration"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "From Apr 1 10:00 a.m. to Apr 2 6:00 p.m.",
+    "entities": [
+      {
+        "start": 0,
+        "end": 40,
+        "value": "From Apr 1 10:00 a.m. to Apr 2 6:00 p.m.",
+        "entity": "duration"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "From Apr 1 10:00 a.m.- Apr 2 6:00 p.m.",
+    "entities": [
+      {
+        "start": 0,
+        "end": 38,
+        "value": "From Apr 1 10:00 a.m.- Apr 2 6:00 p.m.",
+        "entity": "duration"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "From Apr 1 10:00 a.m. until Apr 2 6:00 p.m.",
+    "entities": [
+      {
+        "start": 0,
+        "end": 43,
+        "value": "From Apr 1 10:00 a.m. until Apr 2 6:00 p.m.",
+        "entity": "duration"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "The Peak",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "location",
+        "start": 0,
+        "end": 8,
+        "confidence_entity": 0.6202857494354248,
+        "value": "The Peak",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Stanley",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "location",
+        "start": 0,
+        "end": 7,
+        "confidence_entity": 0.606035590171814,
+        "value": "Stanley",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Lamma Island",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "location",
+        "start": 0,
+        "end": 12,
+        "confidence_entity": 0.7352779507637024,
+        "value": "Lamma Island",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  }
+]

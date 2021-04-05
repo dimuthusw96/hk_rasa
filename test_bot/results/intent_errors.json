@@ -1,0 +1,98 @@
+[
+  {
+    "text": "Buy suitcases in Tsim Sha Tsui",
+    "intent": "menu",
+    "intent_prediction": {
+      "name": "googlemap",
+      "confidence": 0.8176655769348145
+    }
+  },
+  {
+    "text": "What to see in Hong Kong?",
+    "intent": "qa",
+    "intent_prediction": {
+      "name": "sightseeing_flow",
+      "confidence": 0.6067948937416077
+    }
+  },
+  {
+    "text": "what to see",
+    "intent": "qa",
+    "intent_prediction": {
+      "name": "sightseeing_flow",
+      "confidence": 0.46818000078201294
+    }
+  },
+  {
+    "text": "rickshaw",
+    "intent": "qa",
+    "intent_prediction": {
+      "name": "kg",
+      "confidence": 0.2847379446029663
+    }
+  },
+  {
+    "text": "airbnb",
+    "intent": "qa",
+    "intent_prediction": {
+      "name": "kg",
+      "confidence": 0.5541786551475525
+    }
+  },
+  {
+    "text": "I will be transiting in Hong Kong for 6 hours, any sightseeing tour?",
+    "intent": "qa",
+    "intent_prediction": {
+      "name": "transit",
+      "confidence": 0.5460894107818604
+    }
+  },
+  {
+    "text": "seafood",
+    "intent": "qa",
+    "intent_prediction": {
+      "name": "inform_dish",
+      "confidence": 0.438554972410202
+    }
+  },
+  {
+    "text": "Tai Chi",
+    "intent": "qa",
+    "intent_prediction": {
+      "name": "kg",
+      "confidence": 0.42479968070983887
+    }
+  },
+  {
+    "text": "The Peak",
+    "intent": "kg",
+    "intent_prediction": {
+      "name": "inform_location",
+      "confidence": 0.7210727334022522
+    }
+  },
+  {
+    "text": "Stanley",
+    "intent": "kg",
+    "intent_prediction": {
+      "name": "inform_location",
+      "confidence": 0.7125726938247681
+    }
+  },
+  {
+    "text": "Lamma Island",
+    "intent": "kg",
+    "intent_prediction": {
+      "name": "inform_location",
+      "confidence": 0.7539841532707214
+    }
+  },
+  {
+    "text": "getting there",
+    "intent": "kg",
+    "intent_prediction": {
+      "name": "gettingthere",
+      "confidence": 0.677302360534668
+    }
+  }
+]
